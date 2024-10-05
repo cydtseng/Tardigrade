@@ -3,6 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.Events;
 
 public class Typewriter : MonoBehaviour
 {
@@ -17,19 +18,23 @@ public class Typewriter : MonoBehaviour
     private Vector3 startPosition;
     public float moveDistance = 5f; // Distance to move left and right
     public float moveDuration = 0.1f; // Duration of one complete movement cycle (left or right)
-
+    public UnityEvent onTypewriterComplete;
+    
+    private Tween eKeyTween; // Store the tween reference for cleanup
+    
     private void Awake()
     {
-        startPosition = eKey.transform.position;
+        Debug.Log(eKey.position);
     }
 
     void Start() {
+        startPosition = eKey.position;
         DisplayNextNarrative();
         TweenEKey();
     }
 
     void Update() {
-        // If the user press E and text is typing, finish the text display immediately
+        // If the user presses E and text is typing, finish the text display immediately
         if (Input.GetKeyDown(KeyCode.E)) {
             if (isTyping) {
                 StopCoroutine(typingCoroutine);
@@ -47,19 +52,13 @@ public class Typewriter : MonoBehaviour
 
     private void TweenEKey()
     {
-        eKey.DOMoveX(startPosition.x - moveDistance, moveDuration).SetEase(Ease.Linear)
-            .OnComplete(() => {
-                // Once movement to the left completes, move the object back to the right
-                eKey.DOMoveX(startPosition.x + moveDistance, moveDuration).SetEase(Ease.Linear)
-                    .OnComplete(() => {
-                        // Repeat the left-right movement indefinitely for now
-                        TweenEKey();
-                    });
-            });
+        // Store the tween reference for later cleanup
+        eKeyTween = eKey.DOMoveX(startPosition.x + moveDistance, moveDuration)
+            .SetEase(Ease.Linear)
+            .SetLoops(-1, LoopType.Yoyo);  // Infinite loop with a Yoyo pattern
     }
 
     private void DisplayNextNarrative() {
-        
         if (currentNarrativeIndex < narratives.Length) {
             typingCoroutine = StartCoroutine(TypeNarrative(narratives[currentNarrativeIndex]));
         }
@@ -67,6 +66,10 @@ public class Typewriter : MonoBehaviour
         {
             eKey.gameObject.SetActive(false);
             narrativeText.text = "";
+            onTypewriterComplete?.Invoke();
+
+            // Clean up the tween when finished
+            CleanUpTweens();
         }
     }
 
@@ -75,7 +78,7 @@ public class Typewriter : MonoBehaviour
         isTyping = true;
         isTextComplete = false;
 
-        // slowly iter through each character
+        // Slowly iterate through each character
         foreach (char letter in narrative)
         {
             narrativeText.text += letter;
@@ -85,5 +88,21 @@ public class Typewriter : MonoBehaviour
         isTyping = false;
         isTextComplete = true;
         currentNarrativeIndex++;
+    }
+
+    // Method to clean up tweens
+    private void CleanUpTweens()
+    {
+        if (eKeyTween != null && eKeyTween.IsActive())
+        {
+            eKeyTween.Kill();  // Kill the tween and release its resources
+            eKeyTween = null;
+        }
+    }
+
+    // Clean up tweens when the object is destroyed
+    private void OnDestroy()
+    {
+        CleanUpTweens();
     }
 }
