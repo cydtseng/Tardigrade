@@ -12,7 +12,9 @@ public class Player : MonoBehaviour {
     public Vector3 verticalSquishScale   = new Vector3(0.8f, 1.2f, 1f);   
     public Vector3 diagonalSquishScale   = new Vector3(1.1f, 0.9f, 1f);
     public Vector3 normalScale           = Vector3.one;      
-    public float contractScale           = 0.2f;         
+    public float contractScale           = 0.2f;
+    private bool isInQuickTimeChallenge = false;
+    
     
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -29,12 +31,16 @@ public class Player : MonoBehaviour {
         // if (Input.GetKeyDown(KeyCode.E)) {
         //     MorphToNewSprite();
         // }
-        
-        if (movement.sqrMagnitude > 0.01f) {
-            ApplySquishBasedOnDirection();
-        }
-        else {
-            ResetSquish();
+        if (!isInQuickTimeChallenge)
+        {
+            if (movement.sqrMagnitude > 0.01f)
+            {
+                ApplySquishBasedOnDirection();
+            }
+            else
+            {
+                ResetSquish();
+            }
         }
     }
 
@@ -58,8 +64,6 @@ public class Player : MonoBehaviour {
             if (transform.localScale != diagonalSquishScale)
                 transform.DOScale(diagonalSquishScale, squishDuration).SetEase(Ease.OutQuad);
         }
-        
-        
     }
 
    private void ResetSquish() {
@@ -67,6 +71,17 @@ public class Player : MonoBehaviour {
             transform.DOScale(normalScale, squishDuration).SetEase(Ease.OutBounce);
         }
     }
+   
+   // Quick-time challenge compression logic
+   public void ActivateQuickTimeChallenge()
+   {
+       isInQuickTimeChallenge = true;  
+   }
+
+   public void DeactivateQuickTimeChallenge()
+   {
+       isInQuickTimeChallenge = false; 
+   }
    
     private void MorphToNewSprite() {
         Sequence morphSequence = DOTween.Sequence();
