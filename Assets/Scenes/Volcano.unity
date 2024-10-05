@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 707945594}
   - component: {fileID: 707945593}
   - component: {fileID: 707945592}
-  - component: {fileID: 707945591}
+  - component: {fileID: 707945595}
   m_Layer: 0
   m_Name: Fireball
   m_TagString: Untagged
@@ -142,20 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &707945591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707945590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e373e18cfc040ca418fed82dd93e02b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 707945592}
-  fallSpeed: 50
 --- !u!50 &707945592
 Rigidbody2D:
   serializedVersion: 4
@@ -250,6 +236,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &707945595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707945590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e79da243580bb40899dedfeb17edb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 707945592}
+  fallSpeed: 20
 --- !u!1 &960941417
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 960941419}
   - component: {fileID: 960941423}
   - component: {fileID: 960941421}
-  - component: {fileID: 960941422}
+  - component: {fileID: 960941424}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -380,21 +380,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &960941422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 960941417}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bcaf2ed7a6cd6446a396e9ec6734c26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnObject: {fileID: 707945590}
-  spawnProb: 0.5
-  spawnIntervalSeconds: 0.1
 --- !u!114 &960941423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +394,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &960941424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 960941417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25441ce758155dc4d9298416b4e0667d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnObject: {fileID: 707945590}
+  spawnProb: 0.5
+  spawnIntervalSeconds: 0.2
 --- !u!1001 &1113186443
 PrefabInstance:
   m_ObjectHideFlags: 0
