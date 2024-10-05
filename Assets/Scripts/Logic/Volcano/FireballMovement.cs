@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public float fallSpeed = 50f;
+    private Rigidbody2D rb;
+    public float fallSpeed = 20f;
+    public float despawnMargin = 0.5f;
     private float destroyHeight;
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        destroyHeight = -Camera.main.orthographicSize;
+        destroyHeight = -Camera.main.orthographicSize - despawnMargin;
     }
 
     private void FixedUpdate()

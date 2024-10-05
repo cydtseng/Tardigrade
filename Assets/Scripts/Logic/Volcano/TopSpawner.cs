@@ -5,10 +5,10 @@ using UnityEngine;
 public class TopSpawner : MonoBehaviour
 {
     public GameObject spawnObject;
-    public float spawnProb = 0.01f;
-    public float spawnIntervalSeconds = 1f;
+    public float spawnProb = 0.5f;
+    public float spawnIntervalSeconds = 0.1f;
+    public float spawnMargin = 0.5f;
     private int triggerCountdown;
-    private float heightOffset = 0.5f;
 
     void Start() {
         triggerCountdown = (int)(50 * spawnIntervalSeconds);
@@ -28,7 +28,7 @@ public class TopSpawner : MonoBehaviour
             GameObject obj = Instantiate(
                 spawnObject,
                 new Vector3(
-                    Random.Range(left, right), camera.orthographicSize + heightOffset, 0
+                    Random.Range(left, right), camera.orthographicSize + spawnMargin, 0
                 ),
                 Quaternion.identity,
                 this.transform
