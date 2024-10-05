@@ -1,0 +1,6 @@
+[submodule "Assets/Music"]
+	path = Assets/Music
+	url = https://github.com/cydtseng/Tardigrade-Audio.git
+[submodule "Assets/Art"]
+	path = Assets/Art
+	url = https://github.com/cydtseng/Tardigrade-Art.git
