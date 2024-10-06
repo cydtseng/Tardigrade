@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI; // Required to work with UI elements like Slider
 
-public class Friction : MonoBehaviour
+public class Friction : WithPersistentState
 {
     public SpriteRenderer silhouetteRenderer;   // Sprite renderer for the white silhouette
     public Slider heatSlider;                   // Slider UI to display heat level
@@ -22,10 +22,13 @@ public class Friction : MonoBehaviour
     public TMP_Text postQuicktimeText;
     public TMP_Text guidingArrow;
 
+    private float minimumHeat;
+
     void Start()
     {
         // Initialize currentHeat to the maximum heat
         currentHeat = maxHeat;
+        minimumHeat = maxHeat;
 
         // Start the silhouette fully transparent and deactivated
         silhouetteRenderer.gameObject.SetActive(false);
@@ -54,6 +57,10 @@ public class Friction : MonoBehaviour
             // Stop the freeze friction challenge after 20s
             if (elapsedTime >= freezeMechanicDuration)
             {
+                // Demo state management stuff
+                state.addToScore((int)(100*(maxHeat - minimumHeat)));
+                Debug.Log(state.getScore());
+
                 isFrictionChallengeActive = false;
                 heatSlider.gameObject.SetActive(false);
                 postQuicktimeText.gameObject.SetActive(true);
@@ -117,6 +124,7 @@ public class Friction : MonoBehaviour
 
         // Apply the updated alpha value back to the silhouette renderer
         silhouetteRenderer.color = silhouetteColor;
+        minimumHeat = Mathf.Min(minimumHeat, currentHeat);
     }
 
     void UpdateHeatSlider()
