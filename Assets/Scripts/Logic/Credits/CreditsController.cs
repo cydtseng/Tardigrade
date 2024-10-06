@@ -3,14 +3,17 @@ using UnityEngine;
 
 public class CreditsController : MonoBehaviour
 {
+    // Transition
+    public string nextSceneName;
+
     private void Start()
     {
-        
+
     }
 
     public void StartGame()
     {
-        Initiate.Fade("Space", Color.black,1);
+        Initiate.Fade(nextSceneName, Color.black,1);
     }
     public void QuitGame()
     {

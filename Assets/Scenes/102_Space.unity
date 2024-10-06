@@ -230,6 +230,7 @@ MonoBehaviour:
   canvas: {fileID: 523920161}
   titleText: {fileID: 1559996486}
   player: {fileID: 2075556617}
+  nextSceneName: 201_HurlingToEarth
 --- !u!4 &152207412
 Transform:
   m_ObjectHideFlags: 0
@@ -511,7 +512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5662248003487631241, guid: dd6cc410c41711041ba1ecf53a7ec8e5, type: 3}
       propertyPath: biome
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7635495530621817926, guid: dd6cc410c41711041ba1ecf53a7ec8e5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2117,13 +2118,13 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 2033747363}
-  - {fileID: 92679826184233011}
-  - {fileID: 1892458854}
-  - {fileID: 1691899315}
   - {fileID: 493148022}
   - {fileID: 152207412}
-  - {fileID: 1894281654}
   - {fileID: 2000394226}
+  - {fileID: 1691899315}
+  - {fileID: 2033747363}
+  - {fileID: 92679826184233011}
+  - {fileID: 1894281654}
+  - {fileID: 1892458854}
   - {fileID: 641574110}
   - {fileID: 928499918}

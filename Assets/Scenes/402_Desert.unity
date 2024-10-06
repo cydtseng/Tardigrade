@@ -452,7 +452,6 @@ GameObject:
   m_Component:
   - component: {fileID: 999198619}
   - component: {fileID: 999198618}
-  - component: {fileID: 999198617}
   - component: {fileID: 999198620}
   - component: {fileID: 999198621}
   m_Layer: 0
@@ -462,14 +461,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &999198617
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 999198616}
-  m_Enabled: 1
 --- !u!20 &999198618
 Camera:
   m_ObjectHideFlags: 0
@@ -1159,7 +1150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSatisfiedLevel: 1
-  nextScene: President
+  nextScene: 403_5000Years
 --- !u!1001 &2664198305875696867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1221,16 +1212,16 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 999182921}
+  - {fileID: 2042124404}
+  - {fileID: 67811224}
   - {fileID: 999198619}
   - {fileID: 892655984}
   - {fileID: 1964115346}
-  - {fileID: 999182921}
   - {fileID: 618625290}
   - {fileID: 2664198305875696867}
   - {fileID: 1377766128}
   - {fileID: 1685321549}
-  - {fileID: 2042124404}
   - {fileID: 1114149183}
-  - {fileID: 67811224}
   - {fileID: 551740467}
   - {fileID: 1273579247}

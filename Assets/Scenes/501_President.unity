@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countdownTime: 20
-  nextScene: CyberpunkDystopianCity
+  nextScene: 601_CyberpunkDystopianCity
 --- !u!1 &507773868
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,7 +1854,6 @@ GameObject:
   - component: {fileID: 2066503621}
   - component: {fileID: 2066503620}
   - component: {fileID: 2066503622}
-  - component: {fileID: 2066503623}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1972,20 +1971,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &2066503623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066503618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
 --- !u!1 &2090106241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,10 +2332,12 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 568958095}
+  - {fileID: 90884919}
+  - {fileID: 1472689104}
   - {fileID: 2066503621}
   - {fileID: 1661619257}
   - {fileID: 1816572179}
-  - {fileID: 568958095}
   - {fileID: 1483709040}
   - {fileID: 507773870}
   - {fileID: 1265893249}
@@ -2359,7 +2346,5 @@ SceneRoots:
   - {fileID: 687034613}
   - {fileID: 615992657}
   - {fileID: 2090106245}
-  - {fileID: 90884919}
-  - {fileID: 1472689104}
   - {fileID: 1341761622}
   - {fileID: 997927543}

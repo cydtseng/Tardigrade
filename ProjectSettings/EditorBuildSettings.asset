@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/401_WormSwallowCutscene.unity
     guid: a2f764eb1c0924e43b1f184448db35e9
   - enabled: 1
-    path: Assets/Scenes/301b_Desert.unity
+    path: Assets/Scenes/402_Desert.unity
     guid: 6b4bae96d9c3e0c47b51d2f23dcfc6f1
   - enabled: 1
     path: Assets/Scenes/501_President.unity

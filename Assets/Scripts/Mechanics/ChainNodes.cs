@@ -8,11 +8,11 @@ public class ChainNodes : MonoBehaviour
     public List<Transform> nodes;  // List of all nodes in the scene
     public Transform player;
     public float interactionRange = 2.0f;
-    public float followSpeed = 5f;  
+    public float followSpeed = 5f;
     public float nodeSpacing = 1.5f;
     public float pulseDuration = 0.3f;
     public float pulseScaleMultiplier = 1.3f;
-    public Color chainColor = Color.green; 
+    public Color chainColor = Color.green;
     private List<Transform> chain;
 
     // Transition
@@ -36,7 +36,7 @@ public class ChainNodes : MonoBehaviour
             if (!chain.Contains(node))
             {
                 float distanceToNode = Vector3.Distance(player.position, node.position);
-                
+
                 if (distanceToNode < interactionRange)
                 {
                     if (Input.GetKeyDown(KeyCode.E))
@@ -47,7 +47,7 @@ public class ChainNodes : MonoBehaviour
             }
         }
     }
-    
+
     void OnNodeReached(Transform node)
     {
         if (!chain.Contains(node))
@@ -66,7 +66,7 @@ public class ChainNodes : MonoBehaviour
         }
     }
 
-    
+
     void HandleNodeFollowing()
     {
         for (int i = 0; i < chain.Count; i++)

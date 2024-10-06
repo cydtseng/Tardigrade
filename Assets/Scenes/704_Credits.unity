@@ -925,6 +925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f97f2fa79d592ff4a93ed458044638b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextSceneName: 102_Space
 --- !u!1 &1407956221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,10 +1931,10 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1407956224}
-  - {fileID: 1087761914}
   - {fileID: 1373550339}
-  - {fileID: 138561022}
+  - {fileID: 1087761914}
   - {fileID: 124305921}
+  - {fileID: 1407956224}
+  - {fileID: 138561022}
   - {fileID: 745869344}
   - {fileID: 1265547703}

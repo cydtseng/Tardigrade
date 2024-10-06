@@ -233,6 +233,60 @@ Transform:
   - {fileID: 1664388395}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &205261667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 205261669}
+  - component: {fileID: 205261668}
+  m_Layer: 0
+  m_Name: RadiationMechanic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &205261668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205261667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d861db6b8adbef048880844803ff9255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftSpawnObject: {fileID: 1664388394}
+  rightSpawnObject: {fileID: 928101377}
+  topSpawnObject: {fileID: 771126160}
+  bottomSpawnObject: {fileID: 270684331}
+  spawnProb: 1
+  spawnIntervalSeconds: 0.1
+  spawnMargin: 0.5
+  typewriter: {fileID: 774349022}
+  progressBar: {fileID: 2076444213}
+  nextSceneName: 701_SpaceAgain
+--- !u!4 &205261669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205261667}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 212.86656, y: 355.59644, z: -3.6844015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &251106058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1160,8 +1214,6 @@ GameObject:
   - component: {fileID: 2070772209}
   - component: {fileID: 2070772208}
   - component: {fileID: 2070772210}
-  - component: {fileID: 2070772211}
-  - component: {fileID: 2070772212}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1279,42 +1331,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &2070772211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070772206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
---- !u!114 &2070772212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2070772206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d861db6b8adbef048880844803ff9255, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  leftSpawnObject: {fileID: 1664388394}
-  rightSpawnObject: {fileID: 928101377}
-  topSpawnObject: {fileID: 771126160}
-  bottomSpawnObject: {fileID: 270684331}
-  spawnProb: 1
-  spawnIntervalSeconds: 0.1
-  spawnMargin: 0.5
-  typewriter: {fileID: 774349022}
-  progressBar: {fileID: 2076444213}
-  nextSceneName: SpaceAgain
 --- !u!1 &2076444211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,10 +1425,11 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 205261669}
+  - {fileID: 1763014766}
   - {fileID: 2070772209}
   - {fileID: 1494286651}
   - {fileID: 774349020}
   - {fileID: 93790155}
-  - {fileID: 1763014766}
   - {fileID: 755306724}
   - {fileID: 251106058}

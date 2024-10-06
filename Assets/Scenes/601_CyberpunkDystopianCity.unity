@@ -457,8 +457,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1158976165}
   - component: {fileID: 1158976164}
-  - component: {fileID: 1158976163}
   - component: {fileID: 1158976162}
+  - component: {fileID: 1158976166}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -510,14 +510,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!81 &1158976163
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1158976161}
-  m_Enabled: 1
 --- !u!20 &1158976164
 Camera:
   m_ObjectHideFlags: 0
@@ -585,6 +577,20 @@ Transform:
   - {fileID: 1594940282}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1158976166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158976161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &1379379150
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,7 +753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cbbd3359142e3e4a829c6cc463f30dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: WW5
+  nextSceneName: 602_WW5
 --- !u!4 &1595471724
 Transform:
   m_ObjectHideFlags: 0
@@ -767,9 +773,9 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1056499637}
   - {fileID: 1595471724}
-  - {fileID: 1158976165}
   - {fileID: 1379379151}
+  - {fileID: 1056499637}
+  - {fileID: 1158976165}
   - {fileID: 817702943}
   - {fileID: 620634229}
