@@ -681,7 +681,7 @@ GameObject:
   - component: {fileID: 1032939371}
   m_Layer: 0
   m_Name: PersistentState
-  m_TagString: Untagged
+  m_TagString: PersistentStateSingleton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
