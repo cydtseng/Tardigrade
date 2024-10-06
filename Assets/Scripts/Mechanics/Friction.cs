@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI; // Required to work with UI elements like Slider
 
-public class Friction : WithPersistentState
+public class Friction : MonoBehaviour
 {
     public SpriteRenderer silhouetteRenderer;   // Sprite renderer for the white silhouette
     public Slider heatSlider;                   // Slider UI to display heat level
@@ -58,8 +58,8 @@ public class Friction : WithPersistentState
             if (elapsedTime >= freezeMechanicDuration)
             {
                 // Demo state management stuff
-                state.addToScore((int)(100*(maxHeat - minimumHeat)));
-                Debug.Log(state.getScore());
+                PersistentState.state.addToScore((int)(100*(maxHeat - minimumHeat)));
+                Debug.Log(PersistentState.state.getScore());
 
                 isFrictionChallengeActive = false;
                 heatSlider.gameObject.SetActive(false);
