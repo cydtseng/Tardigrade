@@ -13,8 +13,9 @@ public class CompressionMechanic : MonoBehaviour
 
     [SerializeField] private Typewriter typewriter;
     [SerializeField] private Player player;
+    [SerializeField] private MenuManager menu;
 
-    private float _currentScale;  // Tracks current X scale of the object
+    private float _currentScale;  // Tracks current X scale of the player
     private float _progress = 0f; // Tracks progress of resisting compression
 
     private bool isCompressionActive = false;
@@ -95,9 +96,11 @@ public class CompressionMechanic : MonoBehaviour
                 isCompressionActive = false;
                 player.DeactivateQuickTimeChallenge();
                 quickTimeCompleted = true;  // Set the flag to prevent retriggering
+                player.MovePlayerToCenter();
             });
         
         progressBar.gameObject.SetActive(false);
+        menu.BumpPlayer();
         Debug.Log("Quick-time challenge complete!");
     }
 
