@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/President.unity
     guid: b661e748a61da7d4987b189f789ec3c4
   - enabled: 1
+    path: Assets/Scenes/CyberpunkDystopianCity.unity
+    guid: e610d3026631ccd4caef0e4cfeaf7f29
+  - enabled: 1
     path: Assets/Scenes/WW5.unity
     guid: d57ff456679f9ca4e9adff8d1fdcc3d4
   - enabled: 1

@@ -1131,7 +1131,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[0]
@@ -1143,7 +1143,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[2]
-      value: Still remember your Space-fu? Press SPACE to warm yourself up!
+      value: Still remember your Space-fu?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: narratives.Array.data[3]
+      value: Press SPACE to warm yourself up!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

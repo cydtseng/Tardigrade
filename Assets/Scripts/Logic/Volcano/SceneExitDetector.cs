@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SceneExitDetector : MonoBehaviour
 {
-    private bool hasSatisfiedLevel = false;
+    public bool hasSatisfiedLevel = false;
     public string nextScene;
     
     public void setHasSatisfiedLevel()
