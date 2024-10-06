@@ -39,7 +39,7 @@ public class ChainNodes : MonoBehaviour
                 
                 if (distanceToNode < interactionRange)
                 {
-                    if (Input.GetKeyDown(KeyCode.E))
+                    if (Input.GetKeyDown(KeyCode.Space))
                     {
                         OnNodeReached(node);
                     }
