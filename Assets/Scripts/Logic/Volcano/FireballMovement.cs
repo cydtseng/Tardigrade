@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireballMovement : MonoBehaviour
+public class FireballMovement : WithPersistentState
 {
     private Rigidbody2D rb;
     public float fallSpeed = 20f;
@@ -18,6 +18,15 @@ public class FireballMovement : MonoBehaviour
         rb.MovePosition(rb.position + Vector2.down * fallSpeed * Time.fixedDeltaTime);
         if (rb.position.y < destroyHeight) {
             Destroy(gameObject);
+        }
+    }
+
+    // Affect the score in the statemanager
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player")) {
+            state.incrementScore();
+            Debug.Log(state.getScore());
         }
     }
 }

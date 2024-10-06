@@ -7,13 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class PersistentState : MonoBehaviour
 {
+    private int scoreCounter = 0;
+
     void Awake()
     {
-        // GameObject[] objs = GameObject.FindGameObjectsWithTag("music");
-        // if (objs.Length > 1)
-        // {
-        //     Destroy(this.gameObject);
-        // }
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("PersistentStateSingleton");
+        if (objs.Length > 1) Destroy(this.gameObject);
         DontDestroyOnLoad(this.gameObject);
     }
  
@@ -27,10 +26,16 @@ public class PersistentState : MonoBehaviour
     {
         
     }
- 
-    public void Reset()
-    {
-        
+
+    public void incrementScore() {
+        scoreCounter += 1;
     }
 
+    public int getScore() {
+        return scoreCounter;
+    }
+
+    public void addToScore(int value) {
+        scoreCounter += value;
+    }
 }

@@ -1935,7 +1935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[1]
-      value: 'They are one of the most resilient lifeforms of our planet. '
+      value: 'They are one of the most resilient lifeforms on our planet. '
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[2]
