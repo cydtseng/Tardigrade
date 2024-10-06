@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IceAge.unity
     guid: 00e0985f345902148842bacdcc81d98b
   - enabled: 1
+    path: Assets/Scenes/WormSwallowCutscene.unity
+    guid: a2f764eb1c0924e43b1f184448db35e9
+  - enabled: 1
     path: Assets/Scenes/Desert.unity
     guid: 6b4bae96d9c3e0c47b51d2f23dcfc6f1
   - enabled: 1

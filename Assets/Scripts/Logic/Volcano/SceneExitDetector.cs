@@ -3,6 +3,7 @@ using UnityEngine;
 public class SceneExitDetector : MonoBehaviour
 {
     private bool hasSatisfiedLevel = false;
+    public string nextScene;
     
     public void setHasSatisfiedLevel()
     {
@@ -14,7 +15,7 @@ public class SceneExitDetector : MonoBehaviour
         if (other.CompareTag("Player") && hasSatisfiedLevel)
         {
             Debug.Log("Player exited the scene on the right!");
-            Initiate.Fade("300MillionYears", Color.black, 1);
+            Initiate.Fade(nextScene, Color.black, 1);
         }
     }
 }

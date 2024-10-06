@@ -1215,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.22
+      value: -4.94
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1223,19 +1223,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9995278
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.030727781
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1247,7 +1247,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 3.522
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: contractScale
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: restrictToXYMovement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_SortingOrder
@@ -1259,7 +1267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9037746917431385594, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Constraints
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
