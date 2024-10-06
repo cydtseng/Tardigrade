@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SpaceAgain.unity
     guid: 331e888498b5a08409e8f6cda519d908
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: bc7d94b0c766b0f49aad83c7ce466572
   m_configObjects: {}
