@@ -13,7 +13,10 @@ public class ChainNodes : MonoBehaviour
     public float pulseDuration = 0.3f;
     public float pulseScaleMultiplier = 1.3f;
     public Color chainColor = Color.green; 
-    private List<Transform> chain; 
+    private List<Transform> chain;
+
+    // Transition
+    public string nextSceneName;
 
     void Start()
     {
@@ -57,6 +60,8 @@ public class ChainNodes : MonoBehaviour
             if (chain.Count == nodes.Count)
             {
                 Debug.Log("All nodes chained!");
+                // Perform next scene fadeout and transition immediately
+                StartCoroutine(FadeAndLoadScene());
             }
         }
     }
@@ -90,5 +95,11 @@ public class ChainNodes : MonoBehaviour
                 }
             }
         }
+    }
+
+    IEnumerator FadeAndLoadScene()
+    {
+        Initiate.Fade(nextSceneName, Color.black, 1);
+        yield break;
     }
 }
