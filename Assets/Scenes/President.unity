@@ -682,11 +682,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 664559734
+      Data2: 1279607610
+      Data3: -1891230305
+      Data4: 2045184842
+    Path: event:/SFX/President/Eggsplat
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
@@ -696,8 +696,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1661619257
 PrefabInstance:
   m_ObjectHideFlags: 0
