@@ -127,6 +127,20 @@ MonoBehaviour:
   onTypewriterComplete:
     m_PersistentCalls:
       m_Calls: []
+  typewritingAudio:
+    Guid:
+      Data1: -26406424
+      Data2: 1174254118
+      Data3: 642853012
+      Data4: -793231197
+    Path: event:/SFX/CommonUI/Dialogue
+  eKeyAudio:
+    Guid:
+      Data1: -1713457370
+      Data2: 1196276985
+      Data3: -818561645
+      Data4: -2134152262
+    Path: event:/SFX/CommonUI/Mouseclick
 --- !u!1 &408686539173100448
 GameObject:
   m_ObjectHideFlags: 0
