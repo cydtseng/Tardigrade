@@ -19,6 +19,12 @@ public class Typewriter : MonoBehaviour
     public float moveDistance = 5f; // Distance to move left and right
     public float moveDuration = 0.1f; // Duration of one complete movement cycle (left or right)
     public UnityEvent onTypewriterComplete;
+
+    // Typing audio
+    public FMODUnity.EventReference typewritingAudio;
+    private FMOD.Studio.EventInstance typewritingAudioEvent;
+    public FMODUnity.EventReference eKeyAudio;
+    private FMOD.Studio.EventInstance eKeyAudioEvent;
     
     private Tween eKeyTween; // Store the tween reference for cleanup
     
@@ -28,6 +34,8 @@ public class Typewriter : MonoBehaviour
     }
 
     void Start() {
+        typewritingAudioEvent = FMODUnity.RuntimeManager.CreateInstance(typewritingAudio);
+        eKeyAudioEvent = FMODUnity.RuntimeManager.CreateInstance(eKeyAudio);
         startPosition = eKey.position;
         DisplayNextNarrative();
         TweenEKey();
@@ -36,8 +44,10 @@ public class Typewriter : MonoBehaviour
     void Update() {
         // If the user presses E and text is typing, finish the text display immediately
         if (Input.GetKeyDown(KeyCode.E)) {
+            if (eKey.gameObject.activeSelf) eKeyAudioEvent.start();
             if (isTyping) {
                 StopCoroutine(typingCoroutine);
+                typewritingAudioEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
                 narrativeText.text = narratives[currentNarrativeIndex];
                 currentNarrativeIndex++;
                 isTyping = false;
@@ -61,6 +71,7 @@ public class Typewriter : MonoBehaviour
     private void DisplayNextNarrative() {
         if (currentNarrativeIndex < narratives.Length) {
             typingCoroutine = StartCoroutine(TypeNarrative(narratives[currentNarrativeIndex]));
+            typewritingAudioEvent.start();
         }
         else
         {
@@ -85,6 +96,7 @@ public class Typewriter : MonoBehaviour
             yield return new WaitForSeconds(typingSpeed);
         }
 
+        typewritingAudioEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         isTyping = false;
         isTextComplete = true;
         currentNarrativeIndex++;
@@ -104,5 +116,7 @@ public class Typewriter : MonoBehaviour
     private void OnDestroy()
     {
         CleanUpTweens();
+        typewritingAudioEvent.release();
+        eKeyAudioEvent.release();
     }
 }
