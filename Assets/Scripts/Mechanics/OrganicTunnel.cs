@@ -22,10 +22,10 @@ public class OrganicTunnel : MonoBehaviour
     {
         UpdateTunnelBulge();
     }
-
-    // Method to generate the tunnel from segments
+    
     void GenerateTunnel()
     {
+        
         // Calculate the left edge of the camera's view in world space
         Camera cam = Camera.main;
         float cameraLeftEdge = cam.transform.position.x - (cam.orthographicSize * cam.aspect);
@@ -35,7 +35,8 @@ public class OrganicTunnel : MonoBehaviour
         {
             // Position the segments starting from the left edge of the camera
             GameObject segment = Instantiate(tunnelSegmentPrefab, new Vector3(cameraLeftEdge + i * segmentWidth, 0, 0), Quaternion.identity);
-
+            
+            
             // Set the initial scale of each segment
             segment.transform.localScale = new Vector3(1f, 5f, 1f);
             
