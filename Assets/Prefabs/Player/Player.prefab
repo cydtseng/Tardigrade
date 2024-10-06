@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5114821027149393799}
   - component: {fileID: 5316403238209373993}
   - component: {fileID: 2531395628968820444}
+  - component: {fileID: 7881008736561914250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -187,3 +188,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
+--- !u!114 &7881008736561914250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6875726704094840517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: OuchieTrigger
+  EventReference:
+    Guid:
+      Data1: -722741374
+      Data2: 1250836249
+      Data3: 1702920838
+      Data4: -1748787512
+    Path: event:/SFX/CommonUI/Ouch
+  Event: 
+  EventPlayTrigger: 5
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
