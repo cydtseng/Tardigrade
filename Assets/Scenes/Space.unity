@@ -1343,6 +1343,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1894281654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1630150724454433804, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: cameraTransform
+      value: 
+      objectReference: {fileID: 2033747363}
+    - target: {fileID: 1630150724454433804, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: thresholdMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4928561963517574169, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_Name
+      value: Inf space bg
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045067212535569454, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0427fab3d2b57a4fa45939f0e5f12b9, type: 3}
 --- !u!1 &1946772887
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1638,7 @@ GameObject:
   - component: {fileID: 2033747362}
   - component: {fileID: 2033747364}
   - component: {fileID: 2033747366}
+  - component: {fileID: 2033747367}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1722,6 +1788,22 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2033747367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2033747360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0568dc4d0a1e43d4ea421d05f6763d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followTarget: {fileID: 2075556617}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 0, z: 0}
+  delayTime: 1
 --- !u!114 &2075556614 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
@@ -1891,3 +1973,4 @@ SceneRoots:
   - {fileID: 1691899315}
   - {fileID: 493148022}
   - {fileID: 152207412}
+  - {fileID: 1894281654}
