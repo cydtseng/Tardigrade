@@ -14,6 +14,7 @@ public class Player : MonoBehaviour {
     public Vector3 normalScale           = Vector3.one;      
     public float contractScale           = 0.2f;
     private bool isInQuickTimeChallenge = false;
+    private bool isDisablePlayerMovement = false;
     
     
     private Rigidbody2D rb;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour {
     }
 
     void Update() {
+        
         
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
@@ -45,7 +47,10 @@ public class Player : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        rb.velocity = movement * moveSpeed;
+        if (!isDisablePlayerMovement)
+        {
+            rb.velocity = movement * moveSpeed;
+        }
     }
 
     private void ApplySquishBasedOnDirection() {
@@ -95,5 +100,20 @@ public class Player : MonoBehaviour {
         morphSequence.Append(transform.DOScale(normalScale, transitionDuration / 2)
             .SetEase(Ease.OutBounce));
         morphSequence.Play();
+    }
+    
+    public void MovePlayerToCenter()
+    {
+        Vector3 centerPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, Camera.main.nearClipPlane));
+        centerPosition.z = transform.position.z;
+        transform.DOMove(centerPosition, 0.5f).SetEase(Ease.OutQuad).OnComplete(() =>
+        {
+            DisablePlayerMovement();
+        });
+    }
+
+    private void DisablePlayerMovement()
+    {
+        isDisablePlayerMovement = true;
     }
 }
