@@ -25,8 +25,9 @@ public class FireballMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
-            PersistentState.state.incrementScore();
-            Debug.Log(PersistentState.state.getScore());
+            ScoreManager scorer = PersistentState.state.GetScoreManager();
+            scorer.IncrementScore();
+            Debug.Log(scorer.GetScore());
         }
     }
 }

@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6710139546651690486}
   - component: {fileID: 302496475531903782}
+  - component: {fileID: 2135424429869098782}
+  - component: {fileID: 8256982831457936474}
   m_Layer: 0
   m_Name: PersistentState
-  m_TagString: PersistentStateSingleton
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,10 +46,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a5bb0c8712b5248af153250f4e26a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmAudio:
+--- !u!114 &2135424429869098782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799588536332698052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d47a17dc2830f4d8a9317ac3374293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
     Guid:
       Data1: 419461674
       Data2: 1267810242
       Data3: -1517863246
       Data4: 151641125
-    Path: event:/Music/Theme2
+    Path: event:/Music/Main Theme
+--- !u!114 &8256982831457936474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799588536332698052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb41997ed308624b96f45bf7854e369, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

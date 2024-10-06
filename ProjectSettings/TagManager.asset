@@ -6,7 +6,6 @@ TagManager:
   tags:
   - ExplosionTrigger
   - OuchieTrigger
-  - PersistentStateSingleton
   layers:
   - Default
   - TransparentFX

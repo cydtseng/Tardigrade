@@ -35,7 +35,7 @@ public class Friction : MonoBehaviour
         Color silhouetteColor = silhouetteRenderer.color;
         silhouetteColor.a = 0f;
         silhouetteRenderer.color = silhouetteColor;
-        
+
         heatSlider.gameObject.SetActive(false);
         // Initialize the slider to match the heat level
         heatSlider.value = 1f;  // Start the slider at 1 (maximum heat)
@@ -53,13 +53,14 @@ public class Friction : MonoBehaviour
             HandleMovement();
             HandleHeat();
             UpdateHeatSlider();
-            
+
             // Stop the freeze friction challenge after 20s
             if (elapsedTime >= freezeMechanicDuration)
             {
                 // Demo state management stuff
-                PersistentState.state.addToScore((int)(100*(maxHeat - minimumHeat)));
-                Debug.Log(PersistentState.state.getScore());
+                ScoreManager scorer = PersistentState.state.GetScoreManager();
+                scorer.AddToScore((int)(100*(maxHeat - minimumHeat)));
+                Debug.Log(scorer.GetScore());
 
                 isFrictionChallengeActive = false;
                 heatSlider.gameObject.SetActive(false);
@@ -129,7 +130,7 @@ public class Friction : MonoBehaviour
 
     void UpdateHeatSlider()
     {
-        
+
         heatSlider.value = currentHeat / maxHeat;  // As heat decreases, slider moves toward 0
     }
 }
