@@ -35,6 +35,7 @@ public class MenuManager : MonoBehaviour
             .OnComplete(() => {
                 Debug.Log("Game Started!");
                 // SceneManager.LoadScene("GameScene");
+                Initiate.Fade("Volcano", Color.black,1);
             });
     }
 
