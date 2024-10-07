@@ -140,6 +140,7 @@ MonoBehaviour:
   diagonalSquishScale: {x: 1.1, y: 0.9, z: 1}
   normalScale: {x: 1, y: 1, z: 1}
   contractScale: 0
+  playerAnimator: {fileID: 3430039307210522853}
   restrictToXYMovement: 0
 --- !u!58 &5316403238209373993
 CircleCollider2D:
@@ -186,7 +187,7 @@ Animator:
   m_GameObject: {fileID: 6875726704094840517}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2b25d194b95618e4cb61ac6eb0366e03, type: 2}
+  m_Controller: {fileID: 9100000, guid: b19fbf94885e9d942a7395e9cb2f213c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

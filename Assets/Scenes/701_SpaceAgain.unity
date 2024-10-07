@@ -252,6 +252,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3430039307210522853, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -368,6 +372,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2531395628968820444, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430039307210522853, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -995,6 +1003,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3430039307210522853, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1083,6 +1095,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3430039307210522853, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1168,6 +1184,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2531395628968820444, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3430039307210522853, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
