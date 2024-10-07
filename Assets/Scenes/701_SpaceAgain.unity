@@ -678,6 +678,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2620181991157827498, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3385876002542086155, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: m_margin.x
       value: 175.16357
