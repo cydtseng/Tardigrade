@@ -142,6 +142,13 @@ MonoBehaviour:
   contractScale: 0
   playerAnimator: {fileID: 3430039307210522853}
   restrictToXYMovement: 0
+  ouchTrigger:
+    Guid:
+      Data1: -722741374
+      Data2: 1250836249
+      Data3: 1702920838
+      Data4: -1748787512
+    Path: event:/SFX/CommonUI/Ouch
 --- !u!58 &5316403238209373993
 CircleCollider2D:
   m_ObjectHideFlags: 0
