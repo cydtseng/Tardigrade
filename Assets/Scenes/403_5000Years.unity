@@ -708,8 +708,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 5000 years later...
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

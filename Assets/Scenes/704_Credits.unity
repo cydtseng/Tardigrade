@@ -1201,8 +1201,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1232,7 +1232,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1347,8 +1347,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1481,8 +1481,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Game Design and Writing\r\n\r\n\nArt and Animation\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1512,7 +1512,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1781,8 +1781,8 @@ MonoBehaviour:
   m_text: "Tardigrade Travels: \nA Tardigrade's Terrifyingly Terrific Traversal Through
     Time!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1961,8 +1961,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\nSarah Mak\r\nJoan Wu\r\n\r\n\nAudrey\r\nAngie\r\nRyan\r\nQuanhui\r\nBen\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
-  m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
+  m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1992,7 +1992,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 32
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

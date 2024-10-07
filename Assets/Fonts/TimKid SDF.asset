@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!21 &-1216583030736617586
+--- !u!21 &1378786895769241655
 Material:
   serializedVersion: 8
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: TimKid SDF
   m_EditorClassIdentifier: 
   hashCode: 2079646759
-  material: {fileID: -1216583030736617586}
+  material: {fileID: 1378786895769241655}
   materialHashCode: 1004163239
   m_Version: 1.1.0
   m_SourceFontFileGUID: a264b24638ea371409105c40e4b5fcfd
