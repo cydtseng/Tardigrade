@@ -31,7 +31,7 @@ public class TopSpawner : MonoBehaviour
 
     private void StartFireballSpawn()
     {
-        //progressBar.gameObject.SetActive(true);
+        progressBar.gameObject.SetActive(false);
         startGeneratingFireballs = true;
         Camera.main.DOShakePosition(fireballSpawnTime, strength: new Vector3(0.5f, 0.5f, 0), vibrato: 10, randomness: 90, fadeOut: true);
     }
