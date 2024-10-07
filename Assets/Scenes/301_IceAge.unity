@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSatisfiedLevel: 0
-  nextScene: 401_WormSwallowCutscene
+  nextScene: 302_20000Years
 --- !u!61 &777701300
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1672,6 +1672,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
   m_PrefabInstance: {fileID: 1613195733}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1626641820
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: UI/RoundedCorners/RoundedCorners
+  m_Shader: {fileID: 4800000, guid: 0bd2ec5d73751e34a814274a454bec41, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _OuterUV: {r: 0, g: 0, b: 1, a: 1}
+    - _WidthHeightRadius: {r: 329.79114, g: 19.588497, b: 9.8, a: 0}
+  m_BuildTextureStacks: []
 --- !u!114 &1687624215 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7874558820505902075, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}

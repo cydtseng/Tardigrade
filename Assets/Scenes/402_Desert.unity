@@ -340,7 +340,7 @@ SpriteRenderer:
   m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &618625290
@@ -1253,7 +1253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasSatisfiedLevel: 1
-  nextScene: 403_5000Years
+  nextScene: 403a_EndOfWorm
 --- !u!1001 &2664198305875696867
 PrefabInstance:
   m_ObjectHideFlags: 0

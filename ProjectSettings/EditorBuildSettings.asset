@@ -21,14 +21,26 @@ EditorBuildSettings:
     path: Assets/Scenes/301_IceAge.unity
     guid: 00e0985f345902148842bacdcc81d98b
   - enabled: 1
+    path: Assets/Scenes/302_20000Years.unity
+    guid: 2c887abb86b8d43449d2107fb3e385cb
+  - enabled: 1
     path: Assets/Scenes/401_WormSwallowCutscene.unity
     guid: a2f764eb1c0924e43b1f184448db35e9
   - enabled: 1
     path: Assets/Scenes/402_Desert.unity
     guid: 6b4bae96d9c3e0c47b51d2f23dcfc6f1
   - enabled: 1
-    path: Assets/Scenes/403_5000Years.unity
+    path: Assets/Scenes/403_10000Years.unity
     guid: 16bbcc56e5d34994f94089ac3f227b65
+  - enabled: 1
+    path: Assets/Scenes/403a_EndOfWorm.unity
+    guid: fa362c0ad63b61a48a75c0a3f5fd0f72
+  - enabled: 1
+    path: Assets/Scenes/403b_LandPresident.unity
+    guid: 77d5f12e469568c4e9951bb522ee1f62
+  - enabled: 1
+    path: Assets/Scenes/501_PrePresident.unity
+    guid: 51d8d0685d35775478e798da256ec62c
   - enabled: 1
     path: Assets/Scenes/501_President.unity
     guid: b661e748a61da7d4987b189f789ec3c4
@@ -38,6 +50,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/602_WW5.unity
     guid: d57ff456679f9ca4e9adff8d1fdcc3d4
+  - enabled: 1
+    path: Assets/Scenes/603_WarEnd.unity
+    guid: c3620ae7c6d44ce47b87b796359b6df7
   - enabled: 1
     path: Assets/Scenes/701_SpaceAgain.unity
     guid: 331e888498b5a08409e8f6cda519d908
