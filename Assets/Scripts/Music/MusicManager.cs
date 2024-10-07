@@ -7,26 +7,22 @@ public class MusicManager : MonoBehaviour
     private FMOD.Studio.EventInstance instance;
 
     void Awake() {
-        instance = FMODUnity.RuntimeManager.CreateInstance(music);
+        Load(music);
     }
-
     void OnDestroy() {
-        instance.release();
+        Unload();
     }
 
     public void Play() {
         if (IsPlaying()) return;
         instance.start();
     }
-
     public void Stop() {
         instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
-
     public bool IsPlaying() {
         return !IsStopped();
     }
-
     public bool IsStopped() {
         FMOD.Studio.PLAYBACK_STATE playbackState;
         instance.getPlaybackState(out playbackState);
@@ -37,5 +33,18 @@ public class MusicManager : MonoBehaviour
         instance.setParameterByName("Mute", (mute) ? 1 : 0);
         instance.setParameterByName("Biome", (int)biome);
         if (play) Play();
+    }
+
+    public void Reload(FMODUnity.EventReference other) {
+        if (other.Guid == music.Guid) return;
+        Unload();
+        Load(other);
+    }
+    void Load(FMODUnity.EventReference other) {
+        music = other;
+        instance = FMODUnity.RuntimeManager.CreateInstance(music);
+    }
+    void Unload() {
+        instance.release();
     }
 }
