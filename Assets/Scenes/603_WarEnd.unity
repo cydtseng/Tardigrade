@@ -659,7 +659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: 701_SpaceAgain
-  waitDuration: 5
+  waitDuration: 6
 --- !u!4 &1595471724
 Transform:
   m_ObjectHideFlags: 0
