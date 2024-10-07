@@ -1144,7 +1144,7 @@ GameObject:
   - component: {fileID: 1446344266}
   - component: {fileID: 1446344265}
   m_Layer: 5
-  m_Name: Credits Right
+  m_Name: Credits Right Headings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1288,7 +1288,7 @@ GameObject:
   - component: {fileID: 1555134806}
   - component: {fileID: 1555134805}
   m_Layer: 5
-  m_Name: Credits Right (1)
+  m_Name: Credits Right Names
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1434,7 +1434,7 @@ GameObject:
   - component: {fileID: 1566379086}
   - component: {fileID: 1566379085}
   m_Layer: 5
-  m_Name: Credits Left
+  m_Name: Credits Left Headings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1914,7 +1914,7 @@ GameObject:
   - component: {fileID: 1932425415}
   - component: {fileID: 1932425414}
   m_Layer: 5
-  m_Name: Credits Left (1)
+  m_Name: Credits Left Names
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
