@@ -375,11 +375,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1914644324
-      Data2: 1279424751
-      Data3: -970132597
-      Data4: 548575002
-    Path: event:/SFX/Transitions/10,000
+      Data1: 1141977214
+      Data2: 1117599891
+      Data3: 841096325
+      Data4: 534784263
+    Path: event:/SFX/Transitions/20,000
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 0
