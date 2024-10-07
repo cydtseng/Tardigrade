@@ -7,35 +7,29 @@ using UnityEngine.SceneManagement;
 
 public class PersistentState : MonoBehaviour
 {
-    private int scoreCounter = 0;
+    public static PersistentState state;
+    private MusicManager music;
+    private ScoreManager score;
 
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("PersistentStateSingleton");
-        if (objs.Length > 1) Destroy(this.gameObject);
+        if (state != null && state != this) {
+            Destroy(this.gameObject);
+            return;
+        }
         DontDestroyOnLoad(this.gameObject);
-    }
- 
-    void Start()
-    {
-        
-    }
- 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        state = this;
+
+        // Bootstrap managers
+        music = GetComponent<MusicManager>();
+        score = GetComponent<ScoreManager>();
     }
 
-    public void incrementScore() {
-        scoreCounter += 1;
+    public MusicManager GetMusicManager() {
+        return music;
     }
 
-    public int getScore() {
-        return scoreCounter;
-    }
-
-    public void addToScore(int value) {
-        scoreCounter += value;
+    public ScoreManager GetScoreManager() {
+        return score;
     }
 }

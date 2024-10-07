@@ -8,12 +8,16 @@ public class ChainNodes : MonoBehaviour
     public List<Transform> nodes;  // List of all nodes in the scene
     public Transform player;
     public float interactionRange = 2.0f;
-    public float followSpeed = 5f;  
+    public float followSpeed = 5f;
     public float nodeSpacing = 1.5f;
     public float pulseDuration = 0.3f;
     public float pulseScaleMultiplier = 1.3f;
-    public Color chainColor = Color.green; 
+    public Color chainColor = Color.green;
     private List<Transform> chain;
+
+    // One-shots
+    public FMODUnity.EventReference cheersTrack;
+    private FMOD.Studio.EventInstance instance;
 
     // Transition
     public string nextSceneName;
@@ -21,6 +25,12 @@ public class ChainNodes : MonoBehaviour
     void Start()
     {
         chain = new List<Transform>();
+        instance = FMODUnity.RuntimeManager.CreateInstance(cheersTrack);
+    }
+
+    void OnDestroy()
+    {
+        instance.release();
     }
 
     void Update()
@@ -36,7 +46,7 @@ public class ChainNodes : MonoBehaviour
             if (!chain.Contains(node))
             {
                 float distanceToNode = Vector3.Distance(player.position, node.position);
-                
+
                 if (distanceToNode < interactionRange)
                 {
                     if (Input.GetKeyDown(KeyCode.Space))
@@ -47,7 +57,7 @@ public class ChainNodes : MonoBehaviour
             }
         }
     }
-    
+
     void OnNodeReached(Transform node)
     {
         if (!chain.Contains(node))
@@ -56,6 +66,7 @@ public class ChainNodes : MonoBehaviour
             node.DOScale(node.localScale * pulseScaleMultiplier, pulseDuration).SetLoops(2, LoopType.Yoyo);
             node.GetComponent<Renderer>().material.DOColor(chainColor, 0.5f);
             node.DOShakePosition(0.5f, 0.5f, 10, 90, false, true);
+            instance.start();
             Debug.Log("Node added to the chain!");
             if (chain.Count == nodes.Count)
             {
@@ -66,7 +77,7 @@ public class ChainNodes : MonoBehaviour
         }
     }
 
-    
+
     void HandleNodeFollowing()
     {
         for (int i = 0; i < chain.Count; i++)

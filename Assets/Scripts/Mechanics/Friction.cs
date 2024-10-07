@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI; // Required to work with UI elements like Slider
 
-public class Friction : WithPersistentState
+public class Friction : MonoBehaviour
 {
     public SpriteRenderer silhouetteRenderer;   // Sprite renderer for the white silhouette
     public Slider heatSlider;                   // Slider UI to display heat level
@@ -23,29 +23,34 @@ public class Friction : WithPersistentState
     public TMP_Text guidingArrow;
 
     private float minimumHeat;
+    public FMODUnity.EventReference mashingSound;
+    private FMOD.Studio.EventInstance instance;
 
     void Start()
     {
         // Initialize currentHeat to the maximum heat
-        currentHeat = maxHeat;
-        minimumHeat = maxHeat;
+        currentHeat = maxHeat/2;
+        minimumHeat = maxHeat/2;
 
         // Start the silhouette fully transparent and deactivated
         silhouetteRenderer.gameObject.SetActive(false);
         Color silhouetteColor = silhouetteRenderer.color;
         silhouetteColor.a = 0f;
         silhouetteRenderer.color = silhouetteColor;
-        
+
         heatSlider.gameObject.SetActive(false);
         // Initialize the slider to match the heat level
         heatSlider.value = 1f;  // Start the slider at 1 (maximum heat)
         heatSlider.minValue = 0f;
         heatSlider.maxValue = 1f;
 
+        // Load sound
+        instance = FMODUnity.RuntimeManager.CreateInstance(mashingSound);
+
         typewriter.onTypewriterComplete.AddListener(ActivateFrictionChallenge);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isFrictionChallengeActive)
         {
@@ -53,13 +58,14 @@ public class Friction : WithPersistentState
             HandleMovement();
             HandleHeat();
             UpdateHeatSlider();
-            
+
             // Stop the freeze friction challenge after 20s
             if (elapsedTime >= freezeMechanicDuration)
             {
                 // Demo state management stuff
-                state.addToScore((int)(100*(maxHeat - minimumHeat)));
-                Debug.Log(state.getScore());
+                ScoreManager scorer = PersistentState.state.GetScoreManager();
+                scorer.AddToScore((int)(100*(maxHeat - minimumHeat)));
+                Debug.Log(scorer.GetScore());
 
                 isFrictionChallengeActive = false;
                 heatSlider.gameObject.SetActive(false);
@@ -73,6 +79,7 @@ public class Friction : WithPersistentState
     private void OnDestroy()
     {
         typewriter.onTypewriterComplete.RemoveListener(ActivateFrictionChallenge);
+        instance.release();
     }
 
     private void ActivateFrictionChallenge()
@@ -89,8 +96,9 @@ public class Friction : WithPersistentState
 
     void HandleMovement()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))  // consider changing to GetKeyDown
         {
+            // instance.start();  // grunting!
             isMoving = true;
             float moveY = Mathf.Sin(Time.time * moveSpeed);
             transform.Translate(new Vector3(0, moveY, 0) * Time.deltaTime);
@@ -129,7 +137,7 @@ public class Friction : WithPersistentState
 
     void UpdateHeatSlider()
     {
-        
+
         heatSlider.value = currentHeat / maxHeat;  // As heat decreases, slider moves toward 0
     }
 }

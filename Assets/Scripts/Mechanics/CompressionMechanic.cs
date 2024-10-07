@@ -19,10 +19,13 @@ public class CompressionMechanic : MonoBehaviour
     private float _progress = 0f; // Tracks progress of resisting compression
 
     private bool isCompressionActive = false;
-    private bool quickTimeCompleted = false; 
+    private bool quickTimeCompleted = false;
+    public FMODUnity.EventReference mashingSound;
+    private FMOD.Studio.EventInstance instance;
 
     void Start()
     {
+        instance = FMODUnity.RuntimeManager.CreateInstance(mashingSound);
         _currentScale = targetObject.localScale.x;
         typewriter.onTypewriterComplete.AddListener(ActivateCompressionChallenge);
     }
@@ -43,6 +46,7 @@ public class CompressionMechanic : MonoBehaviour
             CompressOverTime();
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                instance.start();  // grunting!
                 ResistCompression();
             }
             UpdateProgressBar();
@@ -52,6 +56,7 @@ public class CompressionMechanic : MonoBehaviour
     private void OnDestroy()
     {
         typewriter.onTypewriterComplete.RemoveListener(ActivateCompressionChallenge);
+        instance.release();
     }
 
     private void CompressOverTime()
@@ -87,18 +92,18 @@ public class CompressionMechanic : MonoBehaviour
         Vector3 currentLocalScale = targetObject.localScale;
         Vector3 originalScale = new Vector3(maxExpansion, currentLocalScale.y, currentLocalScale.z);
         // Scale outward past the original scale by 30% and then back to the original scale with bounce
-        targetObject.DOScale(originalScale * 1.3f, 0.3f)  
-            .SetEase(Ease.OutQuad)                        
+        targetObject.DOScale(originalScale * 1.3f, 0.3f)
+            .SetEase(Ease.OutQuad)
             .OnComplete(() => {
                 targetObject.DOScale(originalScale, 0.3f) // Bounce back to original scale
-                    .SetEase(Ease.OutBounce);         
+                    .SetEase(Ease.OutBounce);
                 // Deactivate the quick-time event when compression completes
                 isCompressionActive = false;
                 player.DeactivateQuickTimeChallenge();
                 quickTimeCompleted = true;  // Set the flag to prevent retriggering
                 player.MovePlayerToCenter();
             });
-        
+
         progressBar.gameObject.SetActive(false);
         menu.BumpPlayer();
         Debug.Log("Quick-time challenge complete!");

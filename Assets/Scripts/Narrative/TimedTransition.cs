@@ -5,6 +5,7 @@ using UnityEngine;
 public class TimedTransition : MonoBehaviour
 {
     public string nextSceneName;  // Set the next scene's name in the Unity Inspector
+    public float waitDuration = 5f;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class TimedTransition : MonoBehaviour
 
     IEnumerator WaitAndLoadScene()
     {
-        yield return new WaitForSeconds(5);  // Wait for 5 seconds
+        yield return new WaitForSeconds(waitDuration);  // Wait for 5 seconds
         Initiate.Fade(nextSceneName, Color.black, 1);
     }
 }

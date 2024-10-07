@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireballMovement : WithPersistentState
+public class FireballMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float fallSpeed = 20f;
@@ -25,8 +25,9 @@ public class FireballMovement : WithPersistentState
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
-            state.incrementScore();
-            Debug.Log(state.getScore());
+            ScoreManager scorer = PersistentState.state.GetScoreManager();
+            scorer.IncrementScore();
+            Debug.Log(scorer.GetScore());
         }
     }
 }
