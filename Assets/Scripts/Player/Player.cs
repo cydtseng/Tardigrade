@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class Player : MonoBehaviour {
     public float contractScale           = 0.2f;
     private bool isInQuickTimeChallenge = false;
     private bool isDisablePlayerMovement = false;
+    public Animator playerAnimator;
 
     // New variable to restrict movement to x and y
     public bool restrictToXYMovement = false;
@@ -51,6 +53,10 @@ public class Player : MonoBehaviour {
     void FixedUpdate() {
         if (!isDisablePlayerMovement) {
             rb.velocity = movement * moveSpeed;
+            
+            // Allow player to transition from idle to walk when speed > 0.1
+            float movementSpeed = rb.velocity.magnitude;
+            playerAnimator.SetFloat("Speed", movementSpeed);
         }
     }
 
@@ -93,6 +99,22 @@ public class Player : MonoBehaviour {
 
     public void DeactivateQuickTimeChallenge() {
         isInQuickTimeChallenge = false; 
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage();
+            Destroy(collision.gameObject);
+        }
+    }
+
+ 
+
+    private void TakeDamage()
+    {
+        playerAnimator.SetTrigger("TakeDamage");
     }
 
     private void MorphToNewSprite() {
