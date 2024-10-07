@@ -18,8 +18,8 @@ To update submodules:
 # Force update and discard local changes
 git submodule update --recursive --remote --force
 
-# Can also use this if make is available (must install on Windows):
-make update
+# Can also use this if make is available—it calls the same command (but you must install on Windows):
+make nuke
 ```
 
 ## FMOD Setup in Unity
