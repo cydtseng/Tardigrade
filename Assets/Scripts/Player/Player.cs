@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -98,6 +99,22 @@ public class Player : MonoBehaviour {
 
     public void DeactivateQuickTimeChallenge() {
         isInQuickTimeChallenge = false; 
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
+        {
+            TakeDamage();
+            Destroy(collision.gameObject);
+        }
+    }
+
+ 
+
+    private void TakeDamage()
+    {
+        playerAnimator.SetTrigger("TakeDamage");
     }
 
     private void MorphToNewSprite() {
