@@ -659,7 +659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1173461742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -867,7 +867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Begin
+  m_text: Start
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
   m_sharedMaterial: {fileID: -1216583030736617586, guid: 7b4a83e6bd362cf45b196203a4b68d96, type: 2}
@@ -1252,6 +1252,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 01c095ebf4ca7284fa7f87b94a2e61a6, type: 3}
+    - target: {fileID: 6655668099987013695, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6875726704094840517, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1282,7 +1290,7 @@ GameObject:
   - component: {fileID: 1854526728}
   - component: {fileID: 1854526727}
   m_Layer: 5
-  m_Name: Begin Button
+  m_Name: Start Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1305,7 +1313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -219.99998, y: -267}
+  m_AnchoredPosition: {x: 0.000030518, y: -267}
   m_SizeDelta: {x: 80, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854526727
