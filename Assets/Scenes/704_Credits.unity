@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 44200745}
   - component: {fileID: 44200744}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Quit Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -874,8 +874,8 @@ RectTransform:
   - {fileID: 1932425413}
   - {fileID: 1446344264}
   - {fileID: 1555134804}
-  - {fileID: 44200748}
   - {fileID: 1576929412}
+  - {fileID: 44200748}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1570,7 +1570,7 @@ GameObject:
   - component: {fileID: 1576929414}
   - component: {fileID: 1576929413}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Replay Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
