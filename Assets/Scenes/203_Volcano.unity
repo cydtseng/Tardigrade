@@ -1321,7 +1321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874558820505902075, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: m_text
-      value: Get out of here while its safe!
+      value: Get out of here while it's safe!
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.size
