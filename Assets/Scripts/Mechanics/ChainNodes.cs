@@ -110,7 +110,7 @@ public class ChainNodes : MonoBehaviour
 
     IEnumerator FadeAndLoadScene()
     {
+        yield return new WaitForSeconds(3);  // Wait for 5 seconds
         Initiate.Fade(nextSceneName, Color.black, 1);
-        yield break;
     }
 }

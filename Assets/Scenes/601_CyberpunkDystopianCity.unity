@@ -196,6 +196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 442311803}
   - component: {fileID: 442311802}
+  - component: {fileID: 442311804}
   m_Layer: 0
   m_Name: DelayedActivation
   m_TagString: Untagged
@@ -210,7 +211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442311801}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 363bc9293b8cd7244bf35ec68849127e, type: 3}
   m_Name: 
@@ -232,6 +233,27 @@ Transform:
   - {fileID: 246423799}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &442311804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442311801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d3c92674ac06544795e034b331f5335, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    Guid:
+      Data1: -1647457477
+      Data2: 1119614927
+      Data3: 341772686
+      Data4: 1942052684
+    Path: event:/SFX/Transitions/uhoh
+  startDelay: 0
+  endDelay: 2
 --- !u!1001 &620634229
 PrefabInstance:
   m_ObjectHideFlags: 0
