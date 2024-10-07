@@ -822,7 +822,7 @@ GameObject:
   - component: {fileID: 1414201191}
   - component: {fileID: 1414201190}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Start Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1289,6 +1289,7 @@ GameObject:
   - component: {fileID: 1854526729}
   - component: {fileID: 1854526728}
   - component: {fileID: 1854526727}
+  - component: {fileID: 1854526730}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -1313,8 +1314,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000030518, y: -267}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: 0.000030518, y: -289.01}
+  m_SizeDelta: {x: 36.4658, y: 14.0279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854526727
 MonoBehaviour:
@@ -1410,6 +1411,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854526725}
   m_CullTransparentMesh: 1
+--- !u!114 &1854526730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854526725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11416282ad2a2ee4cb4383a01106df6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshPro: {fileID: 1414201190}
+  hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  clickColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+  fadeDuration: 0.1
 --- !u!1 &1892458851
 GameObject:
   m_ObjectHideFlags: 0
