@@ -284,6 +284,13 @@ MonoBehaviour:
   typewriter: {fileID: 523920157}
   player: {fileID: 2075556614}
   menu: {fileID: 152207411}
+  mashingSound:
+    Guid:
+      Data1: -195198419
+      Data2: 1182271497
+      Data3: 1602344857
+      Data4: -180943222
+    Path: event:/SFX/CommonUI/Grunt
 --- !u!4 &493148022
 Transform:
   m_ObjectHideFlags: 0

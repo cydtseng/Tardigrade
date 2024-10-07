@@ -702,6 +702,7 @@ GameObject:
   - component: {fileID: 804656359}
   - component: {fileID: 804656358}
   - component: {fileID: 804656364}
+  - component: {fileID: 804656365}
   m_Layer: 0
   m_Name: Egg3
   m_TagString: Untagged
@@ -882,6 +883,37 @@ MonoBehaviour:
   target: {fileID: 1816572176}
   splatter: {fileID: 1326823826}
   despawnMargin: 0.5
+--- !u!114 &804656365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804656357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1532993418
+      Data2: 1258869520
+      Data3: -1705845620
+      Data4: 106592351
+    Path: event:/SFX/President/Projectile
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &997927543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -943,6 +975,69 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd6cc410c41711041ba1ecf53a7ec8e5, type: 3}
+--- !u!1 &1109414534
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109414536}
+  - component: {fileID: 1109414535}
+  m_Layer: 0
+  m_Name: TransitionMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1109414535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109414534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1213068620
+      Data2: 1157248957
+      Data3: -1850300758
+      Data4: -90827304
+    Path: event:/SFX/Transitions/CardOut
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &1109414536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109414534}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 468.71252, y: 204.75626, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1226495449
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +1053,7 @@ GameObject:
   - component: {fileID: 1226495451}
   - component: {fileID: 1226495450}
   - component: {fileID: 1226495456}
+  - component: {fileID: 1226495457}
   m_Layer: 0
   m_Name: Egg2
   m_TagString: Untagged
@@ -1138,6 +1234,37 @@ MonoBehaviour:
   target: {fileID: 1816572176}
   splatter: {fileID: 1326823826}
   despawnMargin: 0.5
+--- !u!114 &1226495457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226495449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1532993418
+      Data2: 1258869520
+      Data3: -1705845620
+      Data4: 106592351
+    Path: event:/SFX/President/Projectile
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1265893247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,6 +2275,7 @@ GameObject:
   - component: {fileID: 2095561643}
   - component: {fileID: 2095561644}
   - component: {fileID: 2095561645}
+  - component: {fileID: 2095561646}
   m_Layer: 0
   m_Name: Egg1
   m_TagString: Untagged
@@ -2328,6 +2456,37 @@ MonoBehaviour:
   target: {fileID: 1816572176}
   splatter: {fileID: 1326823826}
   despawnMargin: 0.5
+--- !u!114 &2095561646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095561638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1532993418
+      Data2: 1258869520
+      Data3: -1705845620
+      Data4: 106592351
+    Path: event:/SFX/President/Projectile
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2348,3 +2507,4 @@ SceneRoots:
   - {fileID: 2090106245}
   - {fileID: 1341761622}
   - {fileID: 997927543}
+  - {fileID: 1109414536}

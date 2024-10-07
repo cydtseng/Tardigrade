@@ -15,12 +15,22 @@ public class ChainNodes : MonoBehaviour
     public Color chainColor = Color.green;
     private List<Transform> chain;
 
+    // One-shots
+    public FMODUnity.EventReference cheersTrack;
+    private FMOD.Studio.EventInstance instance;
+
     // Transition
     public string nextSceneName;
 
     void Start()
     {
         chain = new List<Transform>();
+        instance = FMODUnity.RuntimeManager.CreateInstance(cheersTrack);
+    }
+
+    void OnDestroy()
+    {
+        instance.release();
     }
 
     void Update()
@@ -56,6 +66,7 @@ public class ChainNodes : MonoBehaviour
             node.DOScale(node.localScale * pulseScaleMultiplier, pulseDuration).SetLoops(2, LoopType.Yoyo);
             node.GetComponent<Renderer>().material.DOColor(chainColor, 0.5f);
             node.DOShakePosition(0.5f, 0.5f, 10, 90, false, true);
+            instance.start();
             Debug.Log("Node added to the chain!");
             if (chain.Count == nodes.Count)
             {

@@ -23,6 +23,8 @@ public class Friction : MonoBehaviour
     public TMP_Text guidingArrow;
 
     private float minimumHeat;
+    public FMODUnity.EventReference mashingSound;
+    private FMOD.Studio.EventInstance instance;
 
     void Start()
     {
@@ -41,6 +43,9 @@ public class Friction : MonoBehaviour
         heatSlider.value = 1f;  // Start the slider at 1 (maximum heat)
         heatSlider.minValue = 0f;
         heatSlider.maxValue = 1f;
+
+        // Load sound
+        instance = FMODUnity.RuntimeManager.CreateInstance(mashingSound);
 
         typewriter.onTypewriterComplete.AddListener(ActivateFrictionChallenge);
     }
@@ -74,6 +79,7 @@ public class Friction : MonoBehaviour
     private void OnDestroy()
     {
         typewriter.onTypewriterComplete.RemoveListener(ActivateFrictionChallenge);
+        instance.release();
     }
 
     private void ActivateFrictionChallenge()
@@ -92,6 +98,7 @@ public class Friction : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            instance.start();  // grunting!
             isMoving = true;
             float moveY = Mathf.Sin(Time.time * moveSpeed);
             transform.Translate(new Vector3(0, moveY, 0) * Time.deltaTime);
