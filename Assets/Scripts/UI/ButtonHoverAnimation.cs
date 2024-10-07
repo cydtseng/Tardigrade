@@ -8,8 +8,8 @@ public class ButtonHoverAnimation : MonoBehaviour, IPointerEnterHandler, IPointe
 {
     public TextMeshProUGUI textMeshPro;
     public Color hoverColor = new Color(0.5f, 0.5f, 0.5f);
-    public Color clickColor = new Color(0.3f, 0.3f, 0.3f);
-    public float fadeDuration = 0.3f;
+    public Color clickColor = new Color(91f / 255f, 91f / 255f, 91f / 255f);
+    public float fadeDuration = 0.1f;
 
     private Color originalColor;
     private Coroutine fadeCoroutine;
