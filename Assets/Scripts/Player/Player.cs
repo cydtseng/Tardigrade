@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     public Sprite ballSprite;
-    public SpriteRenderer spriteRenderer;   
+    public SpriteRenderer spriteRenderer;
     public float moveSpeed               = 5f;
     public float squishDuration          = 0.2f;
     public float spinDuration            = 2f;
     public float transitionDuration      = 0.5f;    // transition dur for normal to ball mode
-    public Vector3 horizontalSquishScale = new Vector3(1.2f, 0.8f, 1f); 
-    public Vector3 verticalSquishScale   = new Vector3(0.8f, 1.2f, 1f);   
+    public Vector3 horizontalSquishScale = new Vector3(1.2f, 0.8f, 1f);
+    public Vector3 verticalSquishScale   = new Vector3(0.8f, 1.2f, 1f);
     public Vector3 diagonalSquishScale   = new Vector3(1.1f, 0.9f, 1f);
-    public Vector3 normalScale           = Vector3.one;      
+    public Vector3 normalScale           = Vector3.one;
     public float contractScale           = 0.2f;
     private bool isInQuickTimeChallenge = false;
     private bool isDisablePlayerMovement = false;
@@ -20,19 +20,28 @@ public class Player : MonoBehaviour {
 
     // New variable to restrict movement to x and y
     public bool restrictToXYMovement = false;
-    
+
     private Rigidbody2D rb;
     private Vector2 movement;
 
+    // Ouch one-shots, in case the external trigger does not work
+    public FMODUnity.EventReference ouchTrigger;
+    private FMOD.Studio.EventInstance instance;
+
     void Start() {
         rb = GetComponent<Rigidbody2D>();
+        instance = FMODUnity.RuntimeManager.CreateInstance(ouchTrigger);
+    }
+
+    void OnDestroy() {
+        instance.release();
     }
 
     void Update() {
-        
+
         movement.x = Input.GetAxis("Horizontal");
         movement.y = Input.GetAxis("Vertical");
-        
+
         if (movement.sqrMagnitude > 0.01f) {
             if (restrictToXYMovement) {
                 FlipSpriteBasedOnDirection();
@@ -40,7 +49,7 @@ public class Player : MonoBehaviour {
                 RotateSpriteToMovementDirection();
             }
         }
-        
+
         if (!isInQuickTimeChallenge) {
             if (movement.sqrMagnitude > 0.01f) {
                 ApplySquishBasedOnDirection();
@@ -53,7 +62,7 @@ public class Player : MonoBehaviour {
     void FixedUpdate() {
         if (!isDisablePlayerMovement) {
             rb.velocity = movement * moveSpeed;
-            
+
             // Allow player to transition from idle to walk when speed > 0.1
             float movementSpeed = rb.velocity.magnitude;
             playerAnimator.SetFloat("Speed", movementSpeed);
@@ -91,25 +100,26 @@ public class Player : MonoBehaviour {
             spriteRenderer.flipX = movement.x < 0;
         }
     }
-   
+
     // Quick-time challenge activation flag
     public void ActivateQuickTimeChallenge() {
-        isInQuickTimeChallenge = true;  
+        isInQuickTimeChallenge = true;
     }
 
     public void DeactivateQuickTimeChallenge() {
-        isInQuickTimeChallenge = false; 
+        isInQuickTimeChallenge = false;
     }
-    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Projectile") || (collision.gameObject.CompareTag("OuchieTrigger")))
         {
             TakeDamage();
+            instance.start();
             Destroy(collision.gameObject);
         }
     }
-    
+
     private void TakeDamage()
     {
         playerAnimator.SetTrigger("TakeDamage");
@@ -128,7 +138,7 @@ public class Player : MonoBehaviour {
             .SetEase(Ease.OutBounce));
         morphSequence.Play();
     }
-    
+
     public void MovePlayerToCenter() {
         Vector3 centerPosition = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width / 2f, Screen.height / 2f, Camera.main.nearClipPlane));
         centerPosition.z = transform.position.z;

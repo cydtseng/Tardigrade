@@ -1787,6 +1787,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: OuchieTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 2466242899236805175, guid: 3a90fdf3f08243641a85d94e46f9c482, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 89ff4a16d8d670342873eace07ffceec, type: 3}
     - target: {fileID: 5410078141865278837, guid: 3a90fdf3f08243641a85d94e46f9c482, type: 3}
       propertyPath: m_LocalPosition.x
       value: 72.02

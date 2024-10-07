@@ -705,7 +705,7 @@ GameObject:
   - component: {fileID: 804656365}
   m_Layer: 0
   m_Name: Egg3
-  m_TagString: Projectile
+  m_TagString: OuchieTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -991,7 +991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1109414535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 1226495457}
   m_Layer: 0
   m_Name: Egg2
-  m_TagString: Projectile
+  m_TagString: OuchieTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2286,7 +2286,7 @@ GameObject:
   - component: {fileID: 2095561646}
   m_Layer: 0
   m_Name: Egg1
-  m_TagString: Projectile
+  m_TagString: OuchieTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
