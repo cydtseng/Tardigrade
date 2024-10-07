@@ -29,8 +29,8 @@ public class Friction : MonoBehaviour
     void Start()
     {
         // Initialize currentHeat to the maximum heat
-        currentHeat = maxHeat;
-        minimumHeat = maxHeat;
+        currentHeat = maxHeat/2;
+        minimumHeat = maxHeat/2;
 
         // Start the silhouette fully transparent and deactivated
         silhouetteRenderer.gameObject.SetActive(false);
@@ -50,7 +50,7 @@ public class Friction : MonoBehaviour
         typewriter.onTypewriterComplete.AddListener(ActivateFrictionChallenge);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (isFrictionChallengeActive)
         {
@@ -96,9 +96,9 @@ public class Friction : MonoBehaviour
 
     void HandleMovement()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space))  // consider changing to GetKeyDown
         {
-            instance.start();  // grunting!
+            // instance.start();  // grunting!
             isMoving = true;
             float moveY = Mathf.Sin(Time.time * moveSpeed);
             transform.Translate(new Vector3(0, moveY, 0) * Time.deltaTime);
