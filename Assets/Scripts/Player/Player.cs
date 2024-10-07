@@ -15,6 +15,7 @@ public class Player : MonoBehaviour {
     public float contractScale           = 0.2f;
     private bool isInQuickTimeChallenge = false;
     private bool isDisablePlayerMovement = false;
+    public Animator playerAnimator;
 
     // New variable to restrict movement to x and y
     public bool restrictToXYMovement = false;
@@ -51,6 +52,10 @@ public class Player : MonoBehaviour {
     void FixedUpdate() {
         if (!isDisablePlayerMovement) {
             rb.velocity = movement * moveSpeed;
+            
+            // Allow player to transition from idle to walk when speed > 0.1
+            float movementSpeed = rb.velocity.magnitude;
+            playerAnimator.SetFloat("Speed", movementSpeed);
         }
     }
 
