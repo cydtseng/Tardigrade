@@ -1976,7 +1976,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nSarah Mak\r\nJoan Wu\r\n\r\n\nAudrey\r\nAngie\r\nRyan\r\nQuanhui\r\nBen\r"
+  m_text: "\nSarah Mak\r\nJoan Wu\r\n\r\n\nAudrey Yong\r\nAngelina Tan\r\nRyan Pua\r\nYang
+    Quanhui\r\nBenjamin Tan\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
   m_sharedMaterial: {fileID: -3862515186966709997, guid: 41a0228beb9dedb49b95055464a5064f, type: 2}
