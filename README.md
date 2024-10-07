@@ -1,6 +1,6 @@
 # Tardigrade
 
-## Git submodule instructions
+## Git Submodule Instructions
 
 ```bash
 # Clone repository
