@@ -454,6 +454,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5313140366470830669, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: narratives.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: narratives.Array.data[0]
+      value: Tardigrades can survive...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
+      propertyPath: narratives.Array.data[1]
+      value: A trip through a digestive system!
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

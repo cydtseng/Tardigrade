@@ -1250,7 +1250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7874558820505902075, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: m_text
-      value: It's freezing in here. Let's get outta here!
+      value: The ice age isn't a nice age! Let's get outta here!
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.size
@@ -1270,7 +1270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[3]
-      value: Press SPACE to warm yourself up!
+      value: Press Space to warm yourself up!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

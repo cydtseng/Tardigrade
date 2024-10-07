@@ -1289,15 +1289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[0]
-      value: This is a volcanic wasteland in Earth's early history.
+      value: Tardigrades can survive extreme heat!
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[1]
-      value: Tardigrades can survive extreme heat!
+      value: Press left and right arrow keys to dodge the fireballs!
       objectReference: {fileID: 0}
     - target: {fileID: 8472690585428208205, guid: c3349d0bbd20ffc448c7fa7b842c04bc, type: 3}
       propertyPath: narratives.Array.data[2]
