@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CreditsController : MonoBehaviour
@@ -8,7 +9,15 @@ public class CreditsController : MonoBehaviour
 
     private void Start()
     {
+        CalculateScore();
+    }
 
+    private float CalculateScore() {
+        ScoreManager scorer = PersistentState.state.GetScoreManager();
+        foreach (KeyValuePair<string, float> kv in scorer.playRecord) {
+            Debug.LogFormat("{0}: {1}", kv.Key, kv.Value);
+        }
+        return 0f;
     }
 
     public void StartGame()

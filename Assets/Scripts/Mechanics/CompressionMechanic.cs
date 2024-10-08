@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class CompressionMechanic : MonoBehaviour
 {
+    public static string scoreKey = "SPACE::COMPRESSION";
+
     [SerializeField] private Transform targetObject;
     [SerializeField] public Slider progressBar;
     [SerializeField] private float compressionSpeed = 0.5f; // Speed of continuous compression
@@ -17,6 +19,7 @@ public class CompressionMechanic : MonoBehaviour
 
     private float _currentScale;  // Tracks current X scale of the player
     private float _progress = 0f; // Tracks progress of resisting compression
+    private float _minProgress;
 
     private bool isCompressionActive = false;
     private bool quickTimeCompleted = false;
@@ -27,6 +30,7 @@ public class CompressionMechanic : MonoBehaviour
     {
         instance = FMODUnity.RuntimeManager.CreateInstance(mashingSound);
         _currentScale = targetObject.localScale.x;
+        _minProgress = maxCompression;
         typewriter.onTypewriterComplete.AddListener(ActivateCompressionChallenge);
     }
 
@@ -114,10 +118,13 @@ public class CompressionMechanic : MonoBehaviour
         // Update the progress bar value based on the current scale
         _progress = Mathf.Clamp01((_currentScale - maxCompression) / (maxExpansion - maxCompression));
         progressBar.value = _progress;
+        _minProgress = Mathf.Min(_minProgress, _progress);
 
         // End the challenge if the progress bar is full
         if (_progress >= 1.0f)
         {
+            PersistentState.state.GetScoreManager()
+                .Set(scoreKey, _minProgress);
             EndQuickTimeChallenge();
         }
     }

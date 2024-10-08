@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class OmniMovement : MonoBehaviour
 {
+    public static string scoreKey = "WW5::IRRADIATION";
+
     private Rigidbody2D rb;
     public int directionUDLR = 0;  // default down
     public float moveSpeed = 20f;
@@ -54,6 +56,13 @@ public class OmniMovement : MonoBehaviour
             } else {  // left
                 if (rb.position.x < destroyPosition) Destroy(gameObject);
             }
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            PersistentState.state.GetScoreManager()
+                .SetIncrement(scoreKey);
         }
     }
 }

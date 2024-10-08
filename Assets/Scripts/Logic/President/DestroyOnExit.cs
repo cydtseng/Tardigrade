@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DestroyOnExitOrHit : MonoBehaviour
 {
+    public static string scoreKey = "PRESIDENT::EGGS";
+
     private Rigidbody2D rb;
     public GameObject target;
     public GameObject splatter;
@@ -20,6 +22,10 @@ public class DestroyOnExitOrHit : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.CompareTag("Player")) {
+            PersistentState.state.GetScoreManager()
+                .SetIncrement(scoreKey);
+        }
         if (collision.gameObject == target) {
             GameObject obj = Instantiate(splatter, rb.position, Quaternion.identity);
             obj.SetActive(true);

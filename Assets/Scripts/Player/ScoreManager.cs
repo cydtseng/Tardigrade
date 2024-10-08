@@ -1,19 +1,33 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int scoreCounter = 0;
+    public Dictionary<string, float> playRecord;  // with default of 0
 
-    public void IncrementScore() {
-        scoreCounter += 1;
+    void Start() {
+        Reset();
     }
 
-    public int GetScore() {
-        return scoreCounter;
+    // dictionary access methods for convenience + abstraction
+    public float Get(string key) {
+        if (!playRecord.ContainsKey(key)) {
+            playRecord.Add(key, 0f);
+            return 0f;
+        }
+        return playRecord[key];
     }
-
-    public void AddToScore(int value) {
-        scoreCounter += value;
+    public void Set(string key, float value) {
+        playRecord[key] = value;
+    }
+    public void SetRelative(string key, float value) {
+        Set(key, Get(key) + value);
+    }
+    public void SetIncrement(string key) {
+        SetRelative(key, 1f);
+    }
+    public void Reset() {
+        playRecord = new Dictionary<string, float>();
     }
 }

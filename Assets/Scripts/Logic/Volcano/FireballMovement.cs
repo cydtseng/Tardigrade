@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FireballMovement : MonoBehaviour
 {
+    public static string scoreKey = "VOLCANO::FIREBALL";
+
     private Rigidbody2D rb;
     public float fallSpeed = 20f;
     public float despawnMargin = 0.5f;
@@ -25,9 +27,8 @@ public class FireballMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) {
-            ScoreManager scorer = PersistentState.state.GetScoreManager();
-            scorer.IncrementScore();
-            Debug.Log(scorer.GetScore());
+            PersistentState.state.GetScoreManager()
+                .SetIncrement(scoreKey);
         }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine.UI; // Required to work with UI elements like Slider
 
 public class Friction : MonoBehaviour
 {
+    public static string scoreKey = "ICEAGE::HEAT";
+
     public SpriteRenderer silhouetteRenderer;   // Sprite renderer for the white silhouette
     public Slider heatSlider;                   // Slider UI to display heat level
     public float moveSpeed = 5f;
@@ -63,9 +65,8 @@ public class Friction : MonoBehaviour
             if (elapsedTime >= freezeMechanicDuration)
             {
                 // Demo state management stuff
-                ScoreManager scorer = PersistentState.state.GetScoreManager();
-                scorer.AddToScore((int)(100*(maxHeat - minimumHeat)));
-                Debug.Log(scorer.GetScore());
+                PersistentState.state.GetScoreManager()
+                    .Set(scoreKey, 100*(maxHeat - minimumHeat));
 
                 isFrictionChallengeActive = false;
                 heatSlider.gameObject.SetActive(false);
