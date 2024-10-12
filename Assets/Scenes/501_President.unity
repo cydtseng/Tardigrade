@@ -263,9 +263,10 @@ GameObject:
   m_Component:
   - component: {fileID: 507773870}
   - component: {fileID: 507773869}
+  - component: {fileID: 507773871}
   m_Layer: 0
   m_Name: president_sprite
-  m_TagString: Untagged
+  m_TagString: ExplosionTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,6 +338,128 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &507773871
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507773868}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 19.2, y: 10.8}
+    newSize: {x: 19.2, y: 10.8}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.010501035, y: -2.12}
+      - {x: 0.029498965, y: -1.7686847}
+      - {x: 0.07828808, y: -1.2892901}
+      - {x: 0.08707735, y: -1.1031317}
+      - {x: 0.13828826, y: -1.02}
+      - {x: 0.23949915, y: -0.33555317}
+      - {x: 0.22576225, y: -0.09050097}
+      - {x: 0.14949897, y: -0.013632491}
+      - {x: 0.025052264, y: 0.08334041}
+      - {x: -0.01686848, y: 0.1576828}
+      - {x: -0.12313151, y: 0.18515667}
+      - {x: -0.20242155, y: 0.3602088}
+      - {x: -0.19807924, y: 0.5401044}
+      - {x: -0.2649477, y: 0.61697286}
+      - {x: -0.38181633, y: 0.686973}
+      - {x: -0.4549477, y: 0.73131526}
+      - {x: -0.3401044, y: 0.53647184}
+      - {x: -0.47, y: 0.7}
+      - {x: -0.4431315, y: 0.5301044}
+      - {x: -0.37060544, y: 0.47697288}
+      - {x: -0.29, y: 0.45202506}
+      - {x: -0.26, y: 0.39999998}
+      - {x: -0.37, y: 0.32999998}
+      - {x: -0.46555316, y: 0.39949894}
+      - {x: -0.4725262, y: 0.3309188}
+      - {x: -0.5180794, y: 0.36223412}
+      - {x: -0.6159268, y: 0.39826792}
+      - {x: -0.6455318, y: 0.5058972}
+      - {x: -0.59826416, y: 0.7869565}
+      - {x: -0.59, y: 0.88617057}
+      - {x: -0.653161, y: 0.9749852}
+      - {x: -0.7567174, y: 1.148146}
+      - {x: -0.81513673, y: 1.3528876}
+      - {x: -0.94611174, y: 1.3811009}
+      - {x: -1.0336326, y: 1.3763676}
+      - {x: -1.1311063, y: 1.4344466}
+      - {x: -1.2486848, y: 1.4001045}
+      - {x: -1.3830271, y: 1.3594992}
+      - {x: -1.4886847, y: 1.3263675}
+      - {x: -1.52, y: 1.39}
+      - {x: -1.67, y: 1.23}
+      - {x: -1.7199999, y: 1.1}
+      - {x: -1.7199999, y: 0.96}
+      - {x: -1.66, y: 0.79999995}
+      - {x: -1.7199999, y: 0.72999996}
+      - {x: -1.9499999, y: 0.55}
+      - {x: -1.99, y: 0.47}
+      - {x: -1.9799999, y: 0.28}
+      - {x: -2.03, y: 0.16}
+      - {x: -2.03, y: -0.02}
+      - {x: -1.9499999, y: -0.32999998}
+      - {x: -1.99, y: -0.42999998}
+      - {x: -2, y: -0.5}
+      - {x: -1.99, y: -0.76}
+      - {x: -1.9799999, y: -0.84999996}
+      - {x: -1.9599999, y: -0.90999997}
+      - {x: -1.89, y: -0.96999997}
+      - {x: -1.9399999, y: -1.29}
+      - {x: -1.9799999, y: -1.7099999}
+      - {x: -2.05, y: -1.92}
+      - {x: -2.07, y: -2.27}
+      - {x: -2.12, y: -2.3899999}
+      - {x: -2.12, y: -2.46}
+      - {x: -2.11, y: -2.6799998}
+      - {x: -2.02, y: -2.75}
+      - {x: -1.6899999, y: -2.81}
+      - {x: -1.62, y: -2.8799999}
+      - {x: -1.54, y: -2.9199998}
+      - {x: -1.4399999, y: -2.9399998}
+      - {x: -1.13, y: -2.96}
+      - {x: -0.84999996, y: -2.97}
+      - {x: -0.53999996, y: -3}
+      - {x: -0.29999998, y: -3}
+      - {x: -0.3155532, y: -2.886973}
+      - {x: -0.06292258, y: -2.5880792}
+      - {x: -0.003632553, y: -2.475553}
+      - {x: -0.03676407, y: -2.4006054}
+  m_UseDelaunayMesh: 0
 --- !u!1 &568958093
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +496,7 @@ MonoBehaviour:
   spawnProb: 0.5
   spawnIntervalSeconds: 0.2
   spawnMargin: 0
+  hitProb: 0.1
 --- !u!4 &568958095
 Transform:
   m_ObjectHideFlags: 0
@@ -711,6 +835,7 @@ GameObject:
   - component: {fileID: 804656358}
   - component: {fileID: 804656364}
   - component: {fileID: 804656365}
+  - component: {fileID: 804656366}
   m_Layer: 0
   m_Name: Egg3
   m_TagString: OuchieTrigger
@@ -922,6 +1047,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &804656366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804656357}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857edeaebf04c7f4cbb756611a08659f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 507773868}
+  splatter: {fileID: 1326823826}
 --- !u!1001 &997927543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1062,6 +1201,7 @@ GameObject:
   - component: {fileID: 1226495450}
   - component: {fileID: 1226495456}
   - component: {fileID: 1226495457}
+  - component: {fileID: 1226495458}
   m_Layer: 0
   m_Name: Egg2
   m_TagString: OuchieTrigger
@@ -1273,6 +1413,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1226495458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226495449}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857edeaebf04c7f4cbb756611a08659f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 507773868}
+  splatter: {fileID: 1326823826}
 --- !u!1 &1265893247
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2446,7 @@ GameObject:
   - component: {fileID: 2095561644}
   - component: {fileID: 2095561645}
   - component: {fileID: 2095561646}
+  - component: {fileID: 2095561647}
   m_Layer: 0
   m_Name: Egg1
   m_TagString: OuchieTrigger
@@ -2503,6 +2658,20 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &2095561647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095561638}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 857edeaebf04c7f4cbb756611a08659f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 507773868}
+  splatter: {fileID: 1326823826}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

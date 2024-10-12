@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyOnExitOrHit : MonoBehaviour
+public class DestroyOnExit : MonoBehaviour
 {
     public static string scoreKey = "PRESIDENT::EGGS";
 
