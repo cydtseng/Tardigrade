@@ -60,6 +60,14 @@ public class TopSpawner : MonoBehaviour
                     obj.transform.position = new Vector3(
                         Random.Range(left + spawnHorizontalMargin, right - spawnHorizontalMargin), camera.orthographicSize + spawnMargin, 0
                     );
+
+                    // Randomly flip fireball along x-axis
+                    if (Random.Range(0, 2) == 0) {
+                        obj.GetComponent<SpriteRenderer>().flipX = true;
+                        Vector3 rotation = obj.transform.rotation.eulerAngles;
+                        rotation.z = -rotation.z;    // the sprite has an intrinsic rotation, so need to negate after X-flip
+                        obj.transform.rotation = Quaternion.Euler(rotation);
+                    }
                     obj.SetActive(true);
                 }
             }
