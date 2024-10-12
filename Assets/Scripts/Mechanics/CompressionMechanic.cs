@@ -12,6 +12,9 @@ public class CompressionMechanic : MonoBehaviour
     [SerializeField] private float resistanceAmount = 0.1f;  // Resistance per spacebar press
     [SerializeField] private float maxCompression = 0.1f;    // Minimum X scale
     [SerializeField] private float maxExpansion = 1.0f;      // Maximum X scale
+    [SerializeField] public float initialCompressionSpeed = 0.5f;
+    [SerializeField] public float initialResistanceAmount = 0.05f;
+    private bool forceInitialCompression = true;
 
     [SerializeField] private Typewriter typewriter;
     [SerializeField] private Player player;
@@ -66,7 +69,8 @@ public class CompressionMechanic : MonoBehaviour
     private void CompressOverTime()
     {
         // Reduce the X scale over time to simulate compression
-        _currentScale -= compressionSpeed * Time.deltaTime;
+        float _compressionSpeed = (forceInitialCompression) ? initialCompressionSpeed : compressionSpeed;
+        _currentScale -= _compressionSpeed * Time.deltaTime;
         _currentScale = Mathf.Clamp(_currentScale, maxCompression, maxExpansion);
         Vector3 currentLocalScale = targetObject.localScale;
         targetObject.localScale = new Vector3(_currentScale, currentLocalScale.y, currentLocalScale.z);
@@ -79,12 +83,16 @@ public class CompressionMechanic : MonoBehaviour
             Debug.Log("Compression Reached Max.");
             EndQuickTimeChallenge();
         }
+        if (_currentScale < 0.3f)
+        {
+            forceInitialCompression = false;
+        }
     }
 
     private void ResistCompression()
     {
         // Temporarily increase the X scale to resist compression
-        _currentScale += resistanceAmount;
+        _currentScale += (forceInitialCompression) ? initialResistanceAmount : resistanceAmount;
         _currentScale = Mathf.Clamp(_currentScale, maxCompression, maxExpansion);
 
         Vector3 currentLocalScale = targetObject.localScale;
