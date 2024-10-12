@@ -62,7 +62,7 @@ public class Friction : MonoBehaviour
             UpdateHeatSlider();
 
             // Stop the freeze friction challenge after 20s
-            if (elapsedTime >= freezeMechanicDuration)
+            if ((elapsedTime >= freezeMechanicDuration) || (currentHeat == maxHeat))
             {
                 // Demo state management stuff
                 PersistentState.state.GetScoreManager()
