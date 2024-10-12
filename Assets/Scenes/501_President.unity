@@ -496,7 +496,7 @@ MonoBehaviour:
   spawnProb: 0.5
   spawnIntervalSeconds: 0.2
   spawnMargin: 0
-  hitProb: 0.1
+  hitProb: 0.2
 --- !u!4 &568958095
 Transform:
   m_ObjectHideFlags: 0
@@ -688,15 +688,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 602330114912045995, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_LocalPosition.x
