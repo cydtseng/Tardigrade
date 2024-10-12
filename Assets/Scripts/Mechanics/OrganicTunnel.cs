@@ -14,6 +14,8 @@ public class OrganicTunnel : MonoBehaviour
     public float segmentHeightVariability = 0.1f;  // how much the tunnel varies in height
     public float segmentHeightTimeConstant = 0.1f;   // exponential filter time constant
     public float segmentHeightOffset = 0f;      // offset relative to tardigrade
+    private int reducedBulgeSegments = 18;
+    public float reducedBulgeFactor = 1f;
 
 
     private List<GameObject> tunnelSegments = new List<GameObject>();
@@ -49,11 +51,17 @@ public class OrganicTunnel : MonoBehaviour
             // Perturb relative to previous y value using an exponential filter
             y = ((1 - alpha) * y) + alpha * dy;
 
+            // Reduce bulge from half on the left
+            float squeezingMetric = Mathf.Min(1, i/(float)reducedBulgeSegments);  // [0,1] for amount of squeezing
+            float squeezingFactor = Mathf.Exp(reducedBulgeFactor * (squeezingMetric - 1));  // use exponential
+            float _segmentHeight = squeezingFactor * segmentHeight;
+            y = squeezingFactor * y;  // needed to avoid disjoint pieces
+
             // Position the segments starting from the left edge of the camera
             GameObject segment = Instantiate(tunnelSegmentPrefab, new Vector3(cameraLeftEdge + i * 1f, y + segmentHeightOffset, 0), Quaternion.identity);
 
             // Set the initial scale of each segment
-            segment.transform.localScale = new Vector3(segmentWidth, segmentHeight, 1f);
+            segment.transform.localScale = new Vector3(segmentWidth, _segmentHeight, 1f);
 
             // Store the initial scale in the list for later use
             initialScales.Add(segment.transform.localScale);

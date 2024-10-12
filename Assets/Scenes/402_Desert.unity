@@ -510,6 +510,7 @@ MonoBehaviour:
   segmentHeightVariability: 1.8
   segmentHeightTimeConstant: 0.1
   segmentHeightOffset: -0.1
+  reducedBulgeFactor: 1.5
 --- !u!4 &999182921
 Transform:
   m_ObjectHideFlags: 0
