@@ -7,6 +7,7 @@ public class ChainNodes : MonoBehaviour
 {
     public List<Transform> nodes;  // List of all nodes in the scene
     public Transform player;
+    public int nodesToComplete = 5;
     public float interactionRange = 2.0f;
     public float followSpeed = 5f;
     public float nodeSpacing = 1.5f;
@@ -66,7 +67,7 @@ public class ChainNodes : MonoBehaviour
             node.DOShakePosition(0.5f, 0.5f, 10, 90, false, true);
             instance.start();
             Debug.Log("Node added to the chain!");
-            if (chain.Count == nodes.Count)
+            if (chain.Count == nodesToComplete)
             {
                 Debug.Log("All nodes chained!");
                 // Perform next scene fadeout and transition immediately
