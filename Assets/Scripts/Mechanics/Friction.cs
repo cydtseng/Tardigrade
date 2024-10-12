@@ -12,7 +12,7 @@ public class Friction : MonoBehaviour
     public float heatRate = 0.1f;               // Rate at which heat increases with movement
     public float coolingRate = 0.05f;           // Rate at which the character cools down
     public float maxHeat = 1f;                  // Maximum heat level
-    private float freezeMechanicDuration = 13.5f; // After 15s, progress to next level
+    private float freezeMechanicDuration = 13.5f; // After 13.5s, progress to next level
     private float currentHeat;                  // Current heat level
     private bool isMoving = false;
     private bool isFrictionChallengeActive = false;
