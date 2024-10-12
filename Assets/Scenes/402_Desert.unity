@@ -500,12 +500,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d67420eb81b4ebe40a636873302208c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tunnelSegmentPrefab: {fileID: 1796949021485619017, guid: 15a8c4d23e5bd354caec5a7e29aab44f, type: 3}
+  tunnelSegmentPrefab: {fileID: 1796949021485619017, guid: 0020457c58d01f14ea759830f1aa903a, type: 3}
   segmentCount: 200
-  segmentWidth: 1
+  segmentWidth: 1.2
   player: {fileID: 1964115347}
-  bulgeRadius: 5
+  bulgeRadius: 4
   bulgeStrength: 5
+  segmentHeight: 2
+  segmentHeightVariability: 1.8
+  segmentHeightTimeConstant: 0.1
+  segmentHeightOffset: -0.1
 --- !u!4 &999182921
 Transform:
   m_ObjectHideFlags: 0
