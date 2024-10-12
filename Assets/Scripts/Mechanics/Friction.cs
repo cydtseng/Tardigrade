@@ -31,8 +31,8 @@ public class Friction : MonoBehaviour
     void Start()
     {
         // Initialize currentHeat to the maximum heat
-        currentHeat = maxHeat/2;
-        minimumHeat = maxHeat/2;
+        currentHeat = maxHeat/5;
+        minimumHeat = maxHeat/5;
 
         // Start the silhouette fully transparent and deactivated
         silhouetteRenderer.gameObject.SetActive(false);

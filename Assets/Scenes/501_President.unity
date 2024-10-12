@@ -501,7 +501,7 @@ GameObject:
   - component: {fileID: 615992657}
   - component: {fileID: 615992656}
   - component: {fileID: 615992655}
-  - component: {fileID: 615992654}
+  - component: {fileID: 615992658}
   m_Layer: 0
   m_Name: Blocker Back
   m_TagString: Untagged
@@ -509,37 +509,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &615992654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615992653}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1367536543
-      Data2: 1112670365
-      Data3: 1104210835
-      Data4: 610769721
-    Path: event:/SFX/CommonUI/Screenbump
-  Event: 
-  EventPlayTrigger: 9
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!61 &615992655
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -652,6 +621,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615992658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615992653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0826e61186cb7749a6a47d483e63398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    Guid:
+      Data1: -1367536543
+      Data2: 1112670365
+      Data3: 1104210835
+      Data4: 610769721
+    Path: event:/SFX/CommonUI/Screenbump
 --- !u!1001 &687034613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2253,7 +2241,7 @@ GameObject:
   - component: {fileID: 2090106245}
   - component: {fileID: 2090106244}
   - component: {fileID: 2090106243}
-  - component: {fileID: 2090106242}
+  - component: {fileID: 2090106246}
   m_Layer: 0
   m_Name: Blocker Front
   m_TagString: Untagged
@@ -2261,37 +2249,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2090106242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2090106241}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CollisionTag: 
-  EventReference:
-    Guid:
-      Data1: -1367536543
-      Data2: 1112670365
-      Data3: 1104210835
-      Data4: 610769721
-    Path: event:/SFX/CommonUI/Screenbump
-  Event: 
-  EventPlayTrigger: 9
-  EventStopTrigger: 0
-  AllowFadeout: 1
-  TriggerOnce: 0
-  Preload: 0
-  NonRigidbodyVelocity: 0
-  Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: 1
-  OverrideMaxDistance: 20
 --- !u!61 &2090106243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2404,6 +2361,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2090106246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090106241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0826e61186cb7749a6a47d483e63398, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music:
+    Guid:
+      Data1: -1367536543
+      Data2: 1112670365
+      Data3: 1104210835
+      Data4: 610769721
+    Path: event:/SFX/CommonUI/Screenbump
 --- !u!1 &2095561638
 GameObject:
   m_ObjectHideFlags: 0
