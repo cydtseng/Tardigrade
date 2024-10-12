@@ -10,6 +10,12 @@ public class OrganicTunnel : MonoBehaviour
     public float bulgeRadius = 2f;         // How much the tunnel bulges around the player
     public float bulgeStrength = 0.5f;     // Strength of the bulge effect
 
+    public float segmentHeight = 3f;
+    public float segmentHeightVariability = 0.1f;  // how much the tunnel varies in height
+    public float segmentHeightTimeConstant = 0.1f;   // exponential filter time constant
+    public float segmentHeightOffset = 0f;      // offset relative to tardigrade
+
+
     private List<GameObject> tunnelSegments = new List<GameObject>();
     private List<Vector3> initialScales = new List<Vector3>(); // Store the initial scales of the segments
 
@@ -22,24 +28,33 @@ public class OrganicTunnel : MonoBehaviour
     {
         UpdateTunnelBulge();
     }
-    
+
     void GenerateTunnel()
     {
-        
+
         // Calculate the left edge of the camera's view in world space
         Camera cam = Camera.main;
         float cameraLeftEdge = cam.transform.position.x - (cam.orthographicSize * cam.aspect);
 
+        // Initial perturbation
+        float y = 0;
+        float alpha = segmentHeightTimeConstant;
+
         // Start generating the tunnel segments from the camera's left edge
         for (int i = 0; i < segmentCount; i++)
         {
+            // Perturbation
+            float dy = Random.Range(-segmentHeightVariability, segmentHeightVariability);
+
+            // Perturb relative to previous y value using an exponential filter
+            y = ((1 - alpha) * y) + alpha * dy;
+
             // Position the segments starting from the left edge of the camera
-            GameObject segment = Instantiate(tunnelSegmentPrefab, new Vector3(cameraLeftEdge + i * segmentWidth, 0, 0), Quaternion.identity);
-            
-            
+            GameObject segment = Instantiate(tunnelSegmentPrefab, new Vector3(cameraLeftEdge + i * 1f, y + segmentHeightOffset, 0), Quaternion.identity);
+
             // Set the initial scale of each segment
-            segment.transform.localScale = new Vector3(1f, 5f, 1f);
-            
+            segment.transform.localScale = new Vector3(segmentWidth, segmentHeight, 1f);
+
             // Store the initial scale in the list for later use
             initialScales.Add(segment.transform.localScale);
 
