@@ -25,4 +25,4 @@ make nuke
 ## FMOD Setup in Unity
 Open Unity project > FMOD > in Studio Project Path, enter `Assets/Music/Tardigrade/Tardigrade.fspro`
 
-No need to install FMOD studio or anything else.
+No need to install FMOD Studio or anything else.
