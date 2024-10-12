@@ -9,6 +9,7 @@ public class TopSpawner : MonoBehaviour
     public float spawnProb = 0.5f;
     public float spawnIntervalSeconds = 0.1f;
     public float spawnMargin = 0.5f;
+    private float spawnHorizontalMargin = 2f;
     private int triggerCountdown;
     public Typewriter typewriter;
     public Slider progressBar;
@@ -18,7 +19,7 @@ public class TopSpawner : MonoBehaviour
     private float fireballSpawnTime = 20f; // Total duration for spawning fireballs for now
     private float elapsedTime = 0f;
     public SceneExitDetector sceneExitDetector;
-    
+
 
     void Start()
     {
@@ -57,7 +58,7 @@ public class TopSpawner : MonoBehaviour
                     float left = -camera.orthographicSize * camera.aspect;
                     float right = camera.orthographicSize * camera.aspect;
                     obj.transform.position = new Vector3(
-                        Random.Range(left, right), camera.orthographicSize + spawnMargin, 0
+                        Random.Range(left + spawnHorizontalMargin, right - spawnHorizontalMargin), camera.orthographicSize + spawnMargin, 0
                     );
                     obj.SetActive(true);
                 }
@@ -70,7 +71,7 @@ public class TopSpawner : MonoBehaviour
                 progressBar.gameObject.SetActive(false);
                 postQuicktimeText.gameObject.SetActive(true);
                 guidingArrow.gameObject.SetActive(true);
-                
+
                 // allow user to progress to next level
                 sceneExitDetector.setHasSatisfiedLevel();
             }
