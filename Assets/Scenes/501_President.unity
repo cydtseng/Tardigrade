@@ -331,7 +331,7 @@ Transform:
   m_GameObject: {fileID: 507773868}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.712752, y: 0.6315947, z: 0}
+  m_LocalPosition: {x: 0.712752, y: 0.6315947, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -548,7 +548,7 @@ Transform:
   m_GameObject: {fileID: 615992653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10, y: -2.5, z: 0}
+  m_LocalPosition: {x: -7.03, y: -2.5, z: 0}
   m_LocalScale: {x: 2.4875, y: 32.75897, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -616,19 +616,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: moveSpeed
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: normalScale.x
-      value: 0.3
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: normalScale.y
-      value: 0.4
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: normalScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: restrictToXYMovement
@@ -636,39 +636,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: diagonalSquishScale.x
-      value: 0.4
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: diagonalSquishScale.y
-      value: 0.3
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: diagonalSquishScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: verticalSquishScale.x
-      value: 0.2
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: verticalSquishScale.y
-      value: 0.5
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: verticalSquishScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: horizontalSquishScale.x
-      value: 0.4
+      value: 0.055
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: horizontalSquishScale.y
-      value: 0.3
+      value: 0.045
       objectReference: {fileID: 0}
     - target: {fileID: 5114821027149393799, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: horizontalSquishScale.z
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6875726704094840517, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Name
@@ -676,11 +676,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9037746917431385594, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_BodyType
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037746917431385594, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9037746917431385594, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9037746917431385594, guid: aaaa9b3d073c03f46ab33b907e528846, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2262,7 +2270,7 @@ Transform:
   m_GameObject: {fileID: 2090106241}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.49, y: -5.19, z: 0}
+  m_LocalPosition: {x: 2.49, y: -5.68, z: 0}
   m_LocalScale: {x: 1.2126563, y: 5.6246533, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
